@@ -1,11 +1,16 @@
 package com.sixamigos.sjsucanvasapp.canvas;
 
 /**
+<<<<<<< HEAD
  * @author  Alex Heritier
+=======
+ * Created by Alex on 11/3/15.
+>>>>>>> Added a package for the canvas code + added the canvas connector class
  */
 public class CanvasConnector {
     private static final String TAG = "canvas.CanvasConnector";
 
+<<<<<<< HEAD
     private CanvasConnectorCallback callback;
 
     public CanvasConnector() {
@@ -25,4 +30,9 @@ public class CanvasConnector {
     interface CanvasConnectorCallback {
         public void onCoursesReceived(Course[] courses);
     }
+=======
+    public CanvasConnector() {
+        System.out.println(TAG + ": yolo");
+    }
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 }
