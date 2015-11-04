@@ -4,10 +4,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 <<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -44,9 +47,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
@@ -56,6 +62,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,22 +109,28 @@
 =======
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
     <list default="true" id="f597602d-48aa-49a2-bfdf-6e752b02e1e5" name="Default" comment="">
 =======
     <list default="true" id="f4779b66-be5f-4ff1-952e-c9aa72318da2" name="Default" comment="">
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
+<<<<<<< HEAD
 =======
     <list default="true" id="f4779b66-be5f-4ff1-952e-c9aa72318da2" name="Default" comment="">
 <<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +144,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java" />
 >>>>>>> Added a course object
 =======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -167,6 +182,7 @@
 =======
 >>>>>>> Added a course object
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
@@ -190,6 +206,21 @@
 =======
 >>>>>>> Added a course object
 >>>>>>> Added a course object
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CS151.iws" />
@@ -243,6 +274,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -286,6 +320,7 @@
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
@@ -299,6 +334,8 @@
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
@@ -312,7 +349,12 @@
             <state vertical-scroll-proportion="0.17564403">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
 >>>>>>> Added a course object
+<<<<<<< HEAD
 >>>>>>> Added a course object
+=======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
               <folding />
             </state>
           </provider>
@@ -324,12 +366,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a course object
+=======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
       <file leaf-file-name="CanvasToken.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/login/canvas/CanvasToken.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -342,6 +389,9 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -386,7 +436,17 @@
                 <element signature="e#301#302#0" expanded="true" />
                 <element signature="e#366#367#0" expanded="true" />
                 <element signature="e#406#407#0" expanded="true" />
+<<<<<<< HEAD
 >>>>>>> Added a course object
+=======
+=======
+            <state vertical-scroll-proportion="0.31615925">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+              <folding>
+                <element signature="e#209#210#0" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
               </folding>
 >>>>>>> Added a package for the canvas code + added the canvas connector class
             </state>
@@ -397,6 +457,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -477,7 +540,10 @@
       </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Added a course object
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 =======
 >>>>>>> Added a course object
@@ -498,6 +564,10 @@
         </entry>
       </file>
 >>>>>>> Added a course object
+=======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -1645,6 +1715,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="4340400873000" />
 =======
 =======
@@ -1657,13 +1728,18 @@
 =======
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
         <entry key="$PROJECT_DIR$" value="4342081866000" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
         <entry key="$PROJECT_DIR$" value="4338737799000" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
+<<<<<<< HEAD
 =======
         <entry key="$PROJECT_DIR$" value="4338737799000" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       </map>
     </option>
@@ -1991,6 +2067,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/Course.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java" />
 =======
@@ -2005,6 +2082,10 @@
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a course object
+=======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
         <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/login/CanvasWrapper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/login/canvas/CanvasWrapper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/login/canvas/CanvasException.java" />
@@ -2025,6 +2106,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/Course.java" />
+>>>>>>> Added a course object
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+<<<<<<< HEAD
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 =======
 =======
@@ -2032,25 +2127,11 @@
 >>>>>>> Added a course object
         <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
->>>>>>> Added a package for the canvas code + added the canvas connector class
-=======
->>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 =======
-=======
-        <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/Course.java" />
->>>>>>> Added a course object
-        <option value="$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
     </option>
   </component>
   <component name="NamedScopeManager">
@@ -2063,11 +2144,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="height" value="795" />
 =======
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 <<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -2079,6 +2163,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     <option name="height" value="795" />
@@ -2089,6 +2174,12 @@
 =======
 =======
     <option name="height" value="795" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
+=======
+    <option name="height" value="795" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 >>>>>>> Added a package for the canvas code + added the canvas connector class
   </component>
@@ -2115,6 +2206,7 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2152,6 +2244,8 @@
 =======
 =======
 =======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
       <pane id="PackagesPane" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 >>>>>>> Added a package for the canvas code + added the canvas connector class
@@ -2163,6 +2257,11 @@
 =======
 >>>>>>> Added a course object
 >>>>>>> Added a course object
+=======
+=======
+      <pane id="PackagesPane" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2358,6 +2457,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
@@ -2368,6 +2468,8 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
 >>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
               <option name="myItemId" value="canvas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2376,8 +2478,11 @@
       </pane>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       <pane id="Scratches" />
 <<<<<<< HEAD
@@ -2392,8 +2497,14 @@
 >>>>>>> Added a course object
       <pane id="Scope" />
       <pane id="ProjectPane" />
+<<<<<<< HEAD
       <pane id="Scratches" />
+<<<<<<< HEAD
 >>>>>>> Added a course object
+=======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2446,6 +2557,7 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 <<<<<<< HEAD
 >>>>>>> Added a package for the canvas code + added the canvas connector class
@@ -2453,7 +2565,13 @@
 =======
     <property name="FullScreen" value="false" />
 >>>>>>> Added a course object
+<<<<<<< HEAD
 >>>>>>> Added a course object
+=======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2609,11 +2727,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2626,6 +2742,8 @@
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 <<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -2643,7 +2761,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -2653,6 +2774,9 @@
       <updated>1446584577686</updated>
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
@@ -2666,12 +2790,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="0" y="23" width="1440" height="795" extended-state="6" />
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 <<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -2728,11 +2855,14 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <frame x="0" y="23" width="1440" height="795" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -2743,6 +2873,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298969" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
 =======
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2780,16 +2911,31 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
 =======
 >>>>>>> Added a course object
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2844,6 +2990,7 @@
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
 >>>>>>> Added a package for the canvas code + added the canvas connector class
+<<<<<<< HEAD
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2953,8 +3100,11 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
 >>>>>>> Added a course object
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
     </layout>
   </component>
+<<<<<<< HEAD
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -2964,6 +3114,8 @@
     </option>
 >>>>>>> Added a course object
   </component>
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -2975,6 +3127,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/login/canvas/CanvasToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3058,6 +3213,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     <entry file="file://$PROJECT_DIR$/settings.gradle">
@@ -3068,6 +3224,12 @@
 =======
 =======
     <entry file="file://$PROJECT_DIR$/settings.gradle">
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
+=======
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+=======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       <provider selected="true" editor-type-id="text-editor">
@@ -3086,6 +3248,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
@@ -3293,7 +3458,10 @@
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -3322,7 +3490,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
 >>>>>>> Added a course object
+<<<<<<< HEAD
 >>>>>>> Added a course object
+=======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
+>>>>>>> Added a package for the canvas code + added the canvas connector class
           <folding />
         </state>
       </provider>
@@ -3518,6 +3691,9 @@
 =======
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/login/LogInActivity.java">
@@ -3525,8 +3701,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Added a package for the canvas code + added the canvas connector class
 =======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 >>>>>>> Added a package for the canvas code + added the canvas connector class
           <folding />
         </state>
@@ -3534,6 +3713,9 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/login/canvas/LogInActivity.java">
 >>>>>>> Added a package for the canvas code + added the canvas connector class
       <provider selected="true" editor-type-id="text-editor">
@@ -3561,6 +3743,7 @@
           <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> Added a package for the canvas code + added the canvas connector class
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java">
@@ -3572,6 +3755,15 @@
             <element signature="e#301#302#0" expanded="true" />
             <element signature="e#366#367#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sixamigos/sjsucanvasapp/canvas/CanvasConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31615925">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
           </folding>
 >>>>>>> Added a package for the canvas code + added the canvas connector class
         </state>
