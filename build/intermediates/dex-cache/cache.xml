@@ -3,6 +3,7 @@
 
     <item
 <<<<<<< HEAD
+<<<<<<< HEAD
         jar="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -44,11 +45,20 @@
         sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
         <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/classes-e5730b283fe8cfab82bf4c29c4fccaa97d97e641.jar" />
 =======
+=======
+>>>>>>> Added a package for the canvas code + added the canvas connector class
         jar="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
         <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/classes-e5730b283fe8cfab82bf4c29c4fccaa97d97e641.jar" />
+=======
+        jar="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-8610dd1514fc8b31a54e9b96b74ec2e9ef0ee704.jar" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
     </item>
     <item
         jar="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
@@ -58,6 +68,7 @@
         <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/classes-c55223aab2bef25214ded5d7f17064b4c4af89a2.jar" />
     </item>
     <item
+<<<<<<< HEAD
         jar="/Applications/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -84,6 +95,36 @@
         revision="23.0.1"
         sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
         <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/classes-d68b292f49d0aad8bd8c21b796e3a29d147d35dc.jar" />
+<<<<<<< HEAD
+=======
+=======
+        jar="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/classes-e5730b283fe8cfab82bf4c29c4fccaa97d97e641.jar" />
+    </item>
+    <item
+        jar="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/classes-ee7552125f5e6ee930bdf95ac517a75731e361fc.jar" />
+    </item>
+    <item
+        jar="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/classes-d68b292f49d0aad8bd8c21b796e3a29d147d35dc.jar" />
+    </item>
+    <item
+        jar="/Applications/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/Users/Alex/School/16th Grade/CS 151/final/CS151/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-1d340765ef691e13d88a7fefcd0b4495b9e508e7.jar" />
+>>>>>>> Added a package for the canvas code + added the canvas connector class
 >>>>>>> Added a package for the canvas code + added the canvas connector class
     </item>
 
