@@ -15,6 +15,7 @@ public class CanvasToken {
     private static String CanvasToken = null;
     private String CanvasServer = null;
     private Activity logInActivity = null;
+    private static String clientID = "123"; //TODO needs to be changed
 
     /**
      * Creates a CanvasToken object that handles authorization with canvasServer and sets up token so further API calls can be done.
@@ -50,7 +51,6 @@ public class CanvasToken {
 
     }
 
-
     /**
      * Gets called if token is not null. Opens WebView and performs complete OAUTH2.
      *
@@ -58,8 +58,8 @@ public class CanvasToken {
      */
     private void authorize() throws CanvasLoginFailureException {
         try {
-            logInActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://" + this.CanvasServer)));
-            CanvasToken = "123";
+            logInActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://" + this.CanvasServer + "/login/oauth2/auth?client_id=" + clientID + "&response_type=code")));
+            CanvasToken = "123"; //TODO do whatever i need to do
         } catch (Exception e)
         {
 
