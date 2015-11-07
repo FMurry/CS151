@@ -9,6 +9,7 @@ public class CanvasToken {
 
     /**
      * Used by other classes to get the token. If token does not exist, authorize method will be called.
+     *
      * @return Returns token as String.
      */
     public String getCanvasToken() {
@@ -20,8 +21,7 @@ public class CanvasToken {
             }
             return CanvasToken;
 
-        } catch (CanvasLoginFailureException e)
-        {
+        } catch (CanvasLoginFailureException e) {
             System.out.printf(e.getLocalizedMessage());
             return null;
         }
@@ -31,10 +31,10 @@ public class CanvasToken {
 
     /**
      * Gets called if token is not null. Opens WebView and performs complete OAUTH2.
+     *
      * @throws CanvasLoginFailureException If for some reason the login fails or user cancels login.
      */
-    private void authorize() throws CanvasLoginFailureException
-    {
+    private void authorize() throws CanvasLoginFailureException {
         throw new CanvasLoginFailureException("Not implemented yet.");
 
     }
