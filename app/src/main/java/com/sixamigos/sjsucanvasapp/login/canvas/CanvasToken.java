@@ -12,18 +12,18 @@ import com.sixamigos.sjsucanvasapp.login.LogInActivity;
  */
 public class CanvasToken {
 
-    private static String CanvasToken = null;
-    private String CanvasServer = null;
+    private static String canvasToken = null;
+    private String canvasServer = null;
     private Activity logInActivity = null;
     private static String clientID = "123"; //TODO needs to be changed
 
     /**
-     * Creates a CanvasToken object that handles authorization with canvasServer and sets up token so further API calls can be done.
-     * @param canvasServer CanvasServer that should be used for the authorization. (e.g. sjsu.instructure.com) (No http etc.)
+     * Creates a canvasToken object that handles authorization with canvasServer and sets up token so further API calls can be done.
+     * @param canvasServer canvasServer that should be used for the authorization. (e.g. sjsu.instructure.com) (No http etc.)
      * @param logInActivity A reference to any activity where the OAUTH2 web view should be opened if token does not exist.
      */
     public CanvasToken(String canvasServer, Activity logInActivity) {
-        CanvasServer = canvasServer;
+        this.canvasServer = canvasServer;
         this.logInActivity = logInActivity;
     }
 
@@ -39,10 +39,10 @@ public class CanvasToken {
 
         try {
 
-            if (CanvasToken == null) {
+            if (canvasToken == null) {
                 this.authorize();
             }
-            return CanvasToken;
+            return canvasToken;
 
         } catch (CanvasLoginFailureException e) {
             System.out.printf(e.getLocalizedMessage());
@@ -58,8 +58,8 @@ public class CanvasToken {
      */
     private void authorize() throws CanvasLoginFailureException {
         try {
-            logInActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://" + this.CanvasServer + "/login/oauth2/auth?client_id=" + clientID + "&response_type=code")));
-            CanvasToken = "123"; //TODO do whatever i need to do
+            logInActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://" + this.canvasServer + "/login/oauth2/auth?client_id=" + clientID + "&response_type=code")));
+            canvasToken = "123"; //TODO do whatever i need to do
         } catch (Exception e)
         {
 
