@@ -6,6 +6,15 @@ package com.sixamigos.sjsucanvasapp.login.canvas;
 public class CanvasToken {
 
     private String CanvasToken = null;
+    private String CanvasServer = null;
+
+    /**
+     * Creates a CanvasToken object that handles authorization with canvasServer and sets up token so further API calls can be done.
+     * @param canvasServer CanvasServer that should be used for the authorization. (e.g. sjsu.instructure.com) (No http etc.)
+     */
+    public CanvasToken(String canvasServer) {
+        CanvasServer = canvasServer;
+    }
 
     /**
      * Used by other classes to get the token. If token does not exist, authorize method will be called.
