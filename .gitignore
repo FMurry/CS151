@@ -1,1 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
+
+#OSX Files
+.DS_Store
+
+#Gradle
+.gradle
+
+#Android Studio
+.idea
