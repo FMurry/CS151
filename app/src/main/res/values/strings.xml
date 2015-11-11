@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">SJSUCanvasApp</string>
     <string name="action_settings">Settings</string>
+    <string name="logInText">Please login in below and generate a new access token.</string>
+    <string name="logInTextDescription">Access code:</string>
+    <string name="logInButton">Log in</string>
+    <string name="logInWelcomeText">Welcome to the SJSU Canvas app!</string>
+    <string name="logInErrorText">ERROR: Please enter a valid token. It must be exactly 67 characters long.</string>
 </resources>
