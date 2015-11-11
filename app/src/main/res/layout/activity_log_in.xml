@@ -1,12 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:fitsSystemWindows="true"
-    tools:context=".login.LogInActivity">
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary">
 
-</android.support.design.widget.CoordinatorLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/logInWelcomeText"
+        android:id="@+id/logInTitle"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/logInText"
+        android:id="@+id/logInText"
+        android:layout_gravity="center_horizontal"
+        android:password="false"
+        android:phoneNumber="false"
+        android:singleLine="false"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/logInTextDescription"
+            android:id="@+id/loginTextDescription"
+            android:textAlignment="center"
+            android:singleLine="false" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logInEditText"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/logInErrorText"
+        android:id="@+id/logInErrorMessage"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#FF0000"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logInButton"
+        android:id="@+id/logInButton"
+        android:layout_gravity="center_horizontal"
+        android:onClick="logIn" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/logInWebView"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
