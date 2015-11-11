@@ -57,7 +57,8 @@
         android:id="@+id/logInErrorMessage"
         android:layout_gravity="center_horizontal"
         android:textColor="#FF0000"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:visibility="invisible" />
 
     <Button
         android:layout_width="wrap_content"

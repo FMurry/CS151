@@ -11,7 +11,8 @@ import android.widget.TextView;
 
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.home.HomeActivity;
-import com.sixamigos.sjsucanvasapp.login.canvas.CanvasToken;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by christopherbachner on 11/6/15.
@@ -24,33 +25,36 @@ public class LogInActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_log_in);
 
-    WebView webView = (WebView) findViewById(R.id.logInwebView);
+    WebView webView = (WebView) findViewById(R.id.logInWebView);
     webView.setWebViewClient(new WebViewClient());
     webView.loadUrl("https://sjsu.instructure.com/profile/settings");
+    webView.requestFocus();
 
   }
 
-  /** Christopher Bachner
-   * Gets called when user hits Log In button.
+  /**
+   * Gets called when user hits Log In button. Checks if token has correct size or not. If size is correct, home activity gets launched.
    * @param view
    */
   public void logIn (View view)
   {
     EditText logInEditText = (EditText)findViewById(R.id.logInEditText);
+    TextView errorText = (TextView)findViewById(R.id.logInErrorMessage);
+    String errorString = errorText.getText().toString();
 
-
-    if (logInEditText.length() == 0)
+    if (logInEditText.length() == 0 || logInEditText.length() != 67)
     {
-      ((TextView)findViewById(R.id.logInErrorMessage)).setVisibility(TextView.VISIBLE);
+
+      errorText.setText(errorString + logInEditText.length());
+      errorText.setVisibility(TextView.VISIBLE);
+
     }
     else
     {
-      CanvasToken.
+      CanvasToken.setCanvasToken(logInEditText.getText().toString());
+      Intent i = new Intent(this, HomeActivity.class);
+      startActivity(i);
     }
-
-
-    Intent i = new Intent(this, HomeActivity.class);
-    startActivity(i);
 
   }
 
