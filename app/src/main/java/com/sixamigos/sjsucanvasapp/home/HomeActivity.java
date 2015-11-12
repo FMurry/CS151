@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.sixamigos.sjsucanvasapp.R;
+import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
+import com.sixamigos.sjsucanvasapp.canvas.Course;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +45,16 @@ public class HomeActivity extends AppCompatActivity {
         //set functionality of button
       }
     });
+
+    /** DEBUG */
+    CanvasConnector canvasConnector = new CanvasConnector();
+    canvasConnector.setCallback(new CanvasConnector.CanvasConnectorCallback() {
+      @Override
+      public void onCoursesReceived(Course[] courses) {
+
+      }
+    });
+    canvasConnector.getCourses();
   }
 
   private void setupViewPager(ViewPager viewPager) {

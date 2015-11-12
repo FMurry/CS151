@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.sixamigos.sjsucanvasapp.R;
+import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
 import com.sixamigos.sjsucanvasapp.home.HomeActivity;
 
 import org.w3c.dom.Text;
@@ -31,7 +32,7 @@ public class LogInActivity extends AppCompatActivity {
     webView.setWebViewClient(new WebViewClient());
     webView.loadUrl("https://sjsu.instructure.com/profile/settings");
     webView.requestFocus();
-
+    /** DEBUG */ logIn(null);
   }
 
   /**
@@ -40,6 +41,8 @@ public class LogInActivity extends AppCompatActivity {
    */
   public void logIn (View view)
   {
+    /** ## CHRIS' CODE ##
+     *
     EditText logInEditText = (EditText)findViewById(R.id.logInEditText);
     TextView errorText = (TextView)findViewById(R.id.logInErrorMessage);
     String errorString = errorText.getText().toString();
@@ -57,7 +60,12 @@ public class LogInActivity extends AppCompatActivity {
       Intent i = new Intent(this, HomeActivity.class);
       startActivity(i);
     }
+    */
 
+    /** MY CODE */
+    CanvasToken.setCanvasToken(CanvasConnector.DEBUG_TOKEN);
+    Intent i = new Intent(this, HomeActivity.class);
+    startActivity(i);
   }
 
 }
