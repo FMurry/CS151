@@ -25,6 +25,8 @@ public class LogInActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_log_in);
 
+    findViewById(R.id.logInErrorMessage).setVisibility(View.INVISIBLE);
+
     WebView webView = (WebView) findViewById(R.id.logInWebView);
     webView.setWebViewClient(new WebViewClient());
     webView.loadUrl("https://sjsu.instructure.com/profile/settings");
