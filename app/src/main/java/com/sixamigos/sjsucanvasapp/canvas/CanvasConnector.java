@@ -10,7 +10,6 @@ import java.util.HashMap;
 public class CanvasConnector {
     public static final String DEBUG_TOKEN = "12~1AcZXg0Gha4TSwP46lNAINjM0lOElWBV4qbyxxA4bVoN83dPddq9zGZGMRAGqQo6";
     private static final String TAG = "canvas.CanvasConnector";
-
     private CanvasConnectorCallback callback;
 
     public CanvasConnector() {
