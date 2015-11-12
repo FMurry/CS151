@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.sixamigos.sjsucanvasapp.R;
+import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
 import com.sixamigos.sjsucanvasapp.home.HomeActivity;
 
 import org.w3c.dom.Text;
@@ -41,8 +42,6 @@ public class LogInActivity extends AppCompatActivity {
         } else {
             this.continueLogIn();
         }
-
-
     }
 
     /**
@@ -133,7 +132,6 @@ public class LogInActivity extends AppCompatActivity {
         CanvasToken.setCanvasToken("LOCAL", new File(this.getCacheDir(), "accessToken.tmp"));
         this.launchHome();
     }
-
 }
 
 

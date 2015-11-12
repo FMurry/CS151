@@ -10,6 +10,8 @@ import android.view.View;
 
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.assignments.AssignmentsFragment;
+import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
+import com.sixamigos.sjsucanvasapp.canvas.Course;
 import com.sixamigos.sjsucanvasapp.courses.CoursesFragment;
 
 /** Created by Jason Safaiyeh **/
@@ -40,6 +42,16 @@ public class HomeActivity extends AppCompatActivity {
         //set functionality of button
       }
     });
+
+    /** DEBUG */
+    CanvasConnector canvasConnector = new CanvasConnector();
+    canvasConnector.setCallback(new CanvasConnector.CanvasConnectorCallback() {
+      @Override
+      public void onCoursesReceived(Course[] courses) {
+
+      }
+    });
+    canvasConnector.getCourses();
   }
 
   private void setupViewPager(ViewPager viewPager) {
