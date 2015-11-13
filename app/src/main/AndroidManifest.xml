@@ -2,6 +2,7 @@
 <manifest package="com.sixamigos.sjsucanvasapp"
           xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-sdk android:minSdkVersion="4" />
 
     <application
         android:allowBackup="true"
@@ -19,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".home.HomeActivity"/>
+        <activity android:name=".login.canvas.LoginWebViewActivity"></activity>
     </application>
 
 </manifest>
