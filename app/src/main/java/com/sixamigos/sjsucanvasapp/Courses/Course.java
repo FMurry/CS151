@@ -1,7 +1,8 @@
 package com.sixamigos.sjsucanvasapp.Courses;
 
 /**
- * Created by fredericmurry on 11/12/15. l
+ * Created by Frederic Murry on 11/12/15.
+ * Course Object
  *
  */
 public class Course {
@@ -10,6 +11,8 @@ public class Course {
     private String courseName; //Ex: 151
     private String roomNumber; //Ex: DH 135
     private String fullName; //Ex: Object Oriented Programming
+    private double grade;
+
 
     //private List<Assignments> assignments;
 
@@ -44,10 +47,11 @@ public class Course {
         return roomNumber;
     }
 
+    public double getGrade(){ return grade;}
+
 
     //Mutators_______________________________________________
-    public void setCourseName(String newCourseName){
-        courseName = newCourseName;
+    public void setCourseName(String newCourseName){ courseName = newCourseName;
     }
 
     public void setRoomNumber(String newRoomNumber){
@@ -57,5 +61,15 @@ public class Course {
     public void setFullName(String newFullName){
         fullName = newFullName;
     }
+
+    public void setGrade(double newGrade) { grade = newGrade;}
+
+    /*
+    public String getLetterGrade(){
+
+    }
+     */
+
+
 
 }
