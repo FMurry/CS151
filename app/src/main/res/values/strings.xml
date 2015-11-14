@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">SJSUCanvasApp</string>
     <string name="action_settings">Settings</string>
-    <string name="logInText">Please login in below and generate a new access token.</string>
-    <string name="logInTextDescription">Access code:</string>
+    <string name="logInText">Please click on \'Request Access Code\' to be able to import assignments,grades, and tasks.</string>
+    <string name="logInTextDescription">Paste access code here</string>
     <string name="logInButton">Log in</string>
     <string name="logInWelcomeText">Welcome to the SJSU Canvas app!</string>
     <string name="logInErrorText">ERROR: Please enter a valid token. It must be exactly 67 characters long.</string>
+    <string name="logInOpenWebViewButton">Request Access Code</string>
+    <string name="logInSkipLogIn">Skip set up</string>
+    <string name="logInSkipLogInDescription">To use only local functions without importing any canvas assignments, grades, or tasks click the skip setup button below.</string>
+    <string name="logInWebViewInstruction">Please generate an access code and copy it to the clipboard.</string>
 </resources>
