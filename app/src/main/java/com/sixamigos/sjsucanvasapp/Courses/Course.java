@@ -35,40 +35,79 @@ public class Course {
     }
 
     //Accessors____________________________________________
+
+    /**
+     * Access the ID #
+     * @return
+     */
     public int getId(){
         return id;
     }
 
+    /**
+     * Access the course name
+     * @return
+     */
     public String getCourseName(){
         return courseName;
     }
 
+    /**
+     * Access the room number
+     * @return
+     */
     public String getRoomNumber(){
         return roomNumber;
     }
 
+    /**
+     * Access the grade
+     * @return
+     */
     public double getGrade(){ return grade;}
 
 
     //Mutators_______________________________________________
+
+    /**
+     * Set the course name (different from full name) Ex CS 151
+     * @param newCourseName
+     */
     public void setCourseName(String newCourseName){ courseName = newCourseName;
     }
 
+    /**
+     * Sets the room number of course
+     * @param newRoomNumber
+     */
     public void setRoomNumber(String newRoomNumber){
         roomNumber = newRoomNumber;
     }
 
+    /**
+     * Sets the full name of Course
+     * @param newFullName
+     */
     public void setFullName(String newFullName){
         fullName = newFullName;
     }
 
+    /**
+     * Sets the grade of course
+     * @param newGrade
+     */
     public void setGrade(double newGrade) { grade = newGrade;}
 
-    /*
-    public String getLetterGrade(){
 
-    }
+    //Methods_________________________
+    /**
+     * Returns letter grade of Course
+     * @return
      */
+    public String getLetterGrade(){
+        throw  new UnsupportedOperationException("Letter Grade not yet supported");
+    }
+
 
 
 
