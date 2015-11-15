@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by Christopher Bachner on 11/12/2015 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/logInWebViewInstruction"
+        android:id="@+id/textView2"
+        android:textAlignment="center" />
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="538dp"
+        android:id="@+id/logInWebView"
+        android:layout_gravity="center" />
+
+</LinearLayout>

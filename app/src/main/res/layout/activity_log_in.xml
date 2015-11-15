@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Created by Christopher Bachner on 11/12/2015 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1"
     android:orientation="vertical"
-    android:background="#FFF">
-    <!--android:background="?attr/colorPrimary">-->
-
+    android:clickable="false">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +13,23 @@
         android:text="@string/logInWelcomeText"
         android:id="@+id/logInTitle"
         android:layout_gravity="center_horizontal"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:elegantTextHeight="false"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/sjsu"
+            android:contentDescription="Spartan logo" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,51 +43,69 @@
         android:singleLine="false"
         android:textAlignment="center" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/logInTextDescription"
-            android:id="@+id/loginTextDescription"
-            android:textAlignment="center"
-            android:singleLine="false" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/logInEditText"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/logInErrorText"
         android:id="@+id/logInErrorMessage"
-        android:layout_gravity="center_horizontal"
         android:textColor="#FF0000"
-        android:textAlignment="center"
-        android:visibility="invisible" />
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logInEditText"
+            android:layout_gravity="center_horizontal"
+            android:inputType="text"
+            android:hint="@string/logInTextDescription"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logInButton"
+            android:id="@+id/logInButton"
+            android:onClick="logIn"
+            android:enabled="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logInOpenWebViewButton"
+            android:id="@+id/logInOpenWebViewButton"
+            android:onClick="requestAccess" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/logInSkipLogInDescription"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/logInButton"
-        android:id="@+id/logInButton"
+        android:text="@string/logInSkipLogIn"
+        android:id="@+id/logInSkipLogInButton"
         android:layout_gravity="center_horizontal"
-        android:onClick="logIn" />
-
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/logInWebView"
-        android:layout_gravity="center_horizontal" />
+        android:onClick="skipSetup" />
 
 </LinearLayout>
