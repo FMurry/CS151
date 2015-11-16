@@ -10,4 +10,5 @@
     <string name="logInSkipLogIn">Skip set up</string>
     <string name="logInSkipLogInDescription">To use only local functions without importing any canvas assignments, grades, or tasks click the skip setup button below.</string>
     <string name="logInWebViewInstruction">Please generate an access code and copy it to the clipboard.</string>
+    <string name="loginHelpButton">HELP</string>
 </resources>

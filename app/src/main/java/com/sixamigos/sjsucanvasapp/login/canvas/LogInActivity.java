@@ -17,6 +17,8 @@ import com.sixamigos.sjsucanvasapp.home.HomeActivity;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
+
 /**
  * Created by christopherbachner on 11/6/15.
  */
@@ -24,7 +26,7 @@ import org.w3c.dom.Text;
 public class LogInActivity extends AppCompatActivity {
 
     /**
-     * Handles validation of user input.
+     * Checks if a session file is already existing.
      *
      * @param savedInstanceState
      */
@@ -33,9 +35,25 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
+        if (CanvasToken.readCanvasToken(new File(this.getCacheDir(), "accessToken.tmp")))
+        {
+            this.launchHome();
+        } else {
+            this.continueLogIn();
+        }
+
+
+    }
+
+    /**
+     *Handles user input
+     */
+    private void continueLogIn()
+    {
         final EditText logInEditText = (EditText) findViewById(R.id.logInEditText);
         final Button logInButton = (Button) findViewById(R.id.logInButton);
         final TextView errorText = (TextView) findViewById(R.id.logInErrorMessage);
+
 
         errorText.setVisibility(View.INVISIBLE);
         logInButton.setEnabled(false);
@@ -83,13 +101,20 @@ public class LogInActivity extends AppCompatActivity {
 
             errorText.setText(errorString + logInEditText.length());
             errorText.setVisibility(TextView.VISIBLE);
-
         } else {
-            CanvasToken.setCanvasToken(logInEditText.getText().toString());
-            Intent i = new Intent(this, HomeActivity.class);
-            startActivity(i);
+            CanvasToken.setCanvasToken(logInEditText.getText().toString(), new File(this.getCacheDir(), "accessToken.tmp"));
+            this.launchHome();
         }
 
+    }
+
+    /**
+     * Launches home instance
+     */
+    private void launchHome()
+    {
+        Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
     }
 
     /**
@@ -105,9 +130,8 @@ public class LogInActivity extends AppCompatActivity {
      * @param view
      */
     public void skipSetup(View view) {
-        CanvasToken.setCanvasToken("LOCAL");
-        Intent i = new Intent(this, HomeActivity.class);
-        startActivity(i);
+        CanvasToken.setCanvasToken("LOCAL", new File(this.getCacheDir(), "accessToken.tmp"));
+        this.launchHome();
     }
 
 }
