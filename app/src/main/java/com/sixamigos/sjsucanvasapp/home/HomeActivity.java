@@ -9,7 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.sixamigos.sjsucanvasapp.R;
+import com.sixamigos.sjsucanvasapp.courses.CoursesFragment;
 
+/** Created by Jason Safaiyeh **/
 public class HomeActivity extends AppCompatActivity {
 
   @Override
@@ -41,9 +43,7 @@ public class HomeActivity extends AppCompatActivity {
 
   private void setupViewPager(ViewPager viewPager) {
     HomePagerAdapter adapter = new HomePagerAdapter(getSupportFragmentManager());
-    adapter.addFragment(new HomeScreenFragment(), "Category 1");
-    adapter.addFragment(new HomeScreenFragment(), "Category 2");
-    adapter.addFragment(new HomeScreenFragment(), "Category 3");
+    adapter.addFragment(new CoursesFragment(), "Courses");
     viewPager.setAdapter(adapter);
   }
 }
