@@ -1,4 +1,4 @@
-package com.sixamigos.sjsucanvasapp.Courses;
+package com.sixamigos.sjsucanvasapp.courses;
 
 
 import java.util.List;
