@@ -1,4 +1,4 @@
-package com.sixamigos.sjsucanvasapp.courses;
+package com.sixamigos.sjsucanvasapp.courses1;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

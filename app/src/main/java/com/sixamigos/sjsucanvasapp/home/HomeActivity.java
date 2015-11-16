@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.assignments.AssignmentsFragment;
-import com.sixamigos.sjsucanvasapp.courses.CoursesFragment;
+import com.sixamigos.sjsucanvasapp.courses1.CoursesFragment;
 
 /** Created by Jason Safaiyeh **/
 public class HomeActivity extends AppCompatActivity {
