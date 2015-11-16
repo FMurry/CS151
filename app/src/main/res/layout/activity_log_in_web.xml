@@ -4,13 +4,26 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/logInWebViewInstruction"
-        android:id="@+id/textView2"
-        android:textAlignment="center" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="259dp"
+            android:layout_height="44dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/logInWebViewInstruction"
+            android:id="@+id/textView2"
+            android:textAlignment="center" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loginHelpButton"
+            android:id="@+id/logInHelpButton" />
+    </LinearLayout>
 
     <WebView
         android:layout_width="fill_parent"

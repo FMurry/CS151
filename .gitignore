@@ -8,3 +8,4 @@
 *.bat
 *.iml
 app/*.apk
+app/app.iml
