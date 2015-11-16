@@ -15,6 +15,7 @@ public class Course  {
     private double grade; // Grade of course Ex. 89.90
     private String professor;
     private String professorOffice;
+    private int units;
 
     //private List<Assignments> assignments;
 
@@ -42,29 +43,21 @@ public class Course  {
      * Access the ID #
      * @return
      */
-    public int getId(){
-        return id;
-    }
+    public int getId(){return id;}
 
     /**
      * Access the course name
      * @return
      */
-    public String getCourseName(){
-        return courseName;
-    }
+    public String getCourseName(){return courseName;}
 
     /**
      * Access the room number
      * @return
      */
-    public String getRoomNumber(){
-        return roomNumber;
-    }
+    public String getRoomNumber(){return roomNumber;}
 
-    public String getFullName(){
-        return fullName;
-    }
+    public String getFullName(){return fullName;}
     /**
      * Access the grade
      * @return
@@ -83,6 +76,8 @@ public class Course  {
      */
     public String getProfessorOffice() {return professorOffice;}
 
+    public int getUnits(){return units;}
+
 
     //Mutators_______________________________________________
 
@@ -96,17 +91,13 @@ public class Course  {
      * Sets the room number of course
      * @param newRoomNumber
      */
-    public void setRoomNumber(String newRoomNumber){
-        roomNumber = newRoomNumber;
-    }
+    public void setRoomNumber(String newRoomNumber){roomNumber = newRoomNumber;}
 
     /**
      * Sets the full name of Course
      * @param newFullName
      */
-    public void setFullName(String newFullName){
-        fullName = newFullName;
-    }
+    public void setFullName(String newFullName){fullName = newFullName;}
 
     /**
      * Sets the grade of course
@@ -114,9 +105,25 @@ public class Course  {
      */
     public void setGrade(double newGrade) { grade = newGrade;}
 
+    /**
+     * Set the Professor name
+     * @param newProfessor
+     */
     public void setProfessor(String newProfessor) {professor = newProfessor;}
 
+    /**
+     * Set the Professor office
+     * @param newProfessorOffice
+     */
     public void setProfessorOffice(String newProfessorOffice) {professorOffice = newProfessorOffice;}
+
+    /**
+     * Set the amount of units
+     * @param newUnits
+     */
+    public void setUnits(int newUnits){units = newUnits;}
+
+
 
     //Methods_________________________
     /**
