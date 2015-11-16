@@ -1,6 +1,8 @@
 package com.sixamigos.sjsucanvasapp.Courses;
 
 
+import java.util.List;
+
 /**
  * Created by Frederic Murry on 11/12/15.
  * Course Object
@@ -17,7 +19,7 @@ public class Course  {
     private String professorOffice;
     private int units;
 
-    //private List<Assignments> assignments;
+    private List<Assignment> assignments;
 
 
     // CONTSTRUCTORS_______________________________________
