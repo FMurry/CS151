@@ -1,5 +1,12 @@
 package com.sixamigos.sjsucanvasapp.login.canvas;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * Created by christopherbachner on 11/6/15.
  */
@@ -7,14 +14,46 @@ public class CanvasToken {
 
     private static String canvasToken = null;
 
-    //TODO implement saved encrypted token
 
     /**
      * Sets new access token that has been pasted by the user in loginactivity.
-     * @param token The pasted token.
+     *
+     * @param cacheFile File in the cache directory of the context
+     * @param token     The pasted token.
      */
-    protected static void setCanvasToken(String token) {
+    protected static void setCanvasToken(String token, File cacheFile) {
+        BufferedWriter bufferedWriter;
+
         canvasToken = token;
+
+        try {
+            bufferedWriter = new BufferedWriter(new FileWriter(cacheFile, false));
+            bufferedWriter.write(canvasToken);
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Used internally to check if an access token is already existent in the cache
+     *
+     * @param cacheFile File in the cache directory of the context
+     * @return
+     */
+
+    protected static boolean readCanvasToken(File cacheFile) {
+        try {
+            if (cacheFile.exists()) {
+                canvasToken = new BufferedReader(new FileReader(cacheFile)).readLine();
+                return true;
+            } else {
+                return false;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     /**
