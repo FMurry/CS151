@@ -1,5 +1,5 @@
 package com.sixamigos.sjsucanvasapp.courses;
-
+import com.sixamigos.sjsucanvasapp.assignments.*;
 
 import java.util.List;
 
