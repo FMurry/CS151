@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.sixamigos.sjsucanvasapp.R;
+import com.sixamigos.sjsucanvasapp.assignments.AssignmentsFragment;
 import com.sixamigos.sjsucanvasapp.courses.CoursesFragment;
 
 /** Created by Jason Safaiyeh **/
@@ -44,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
   private void setupViewPager(ViewPager viewPager) {
     HomePagerAdapter adapter = new HomePagerAdapter(getSupportFragmentManager());
     adapter.addFragment(new CoursesFragment(), "Courses");
+    adapter.addFragment(new AssignmentsFragment(), "Assignments");
     viewPager.setAdapter(adapter);
   }
 }
