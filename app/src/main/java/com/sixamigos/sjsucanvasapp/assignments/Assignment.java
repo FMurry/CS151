@@ -1,5 +1,9 @@
 package com.sixamigos.sjsucanvasapp.assignments;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * Created by fredericmurry on 11/15/15.
  */
@@ -9,6 +13,10 @@ public class Assignment {
     private double points;// points received
     private double totalPoints;//total points assignment is worth
     private String description;
+    private SimpleDateFormat dateFormat;
+    private Date dateDue;
+
+    public static final String format = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
 
     // CONTSTRUCTORS_______________________________________
 
@@ -22,6 +30,8 @@ public class Assignment {
     public Assignment(String newName, double newTotalPoints){
         name = newName;
         totalPoints = newTotalPoints;
+        dateFormat = new SimpleDateFormat(format, Locale.US);
+
     }
 
     /**
