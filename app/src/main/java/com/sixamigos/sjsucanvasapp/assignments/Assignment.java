@@ -1,5 +1,6 @@
 package com.sixamigos.sjsucanvasapp.assignments;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -14,7 +15,7 @@ public class Assignment {
     private double totalPoints;//total points assignment is worth
     private String description;
     private SimpleDateFormat dateFormat;
-    private Date dateDue;
+    private Date dateDue;// If Date is needed
 
     public static final String format = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
 
@@ -23,27 +24,41 @@ public class Assignment {
     public Assignment(){}
 
     /**
-     * Constructor including name and total points
+     * Assignment Constructor (Name, Total Points)
      * @param newName Name of assignment
      * @param newTotalPoints Total points of assignment
      */
     public Assignment(String newName, double newTotalPoints){
         name = newName;
         totalPoints = newTotalPoints;
-        dateFormat = new SimpleDateFormat(format, Locale.US);
-
+        points = -1.00;
     }
 
     /**
-     * Constructor including name, description and total points
+     * Assignment Constructor (Name,Description,Total Points, Date(String))
      * @param newName Name of assignment
      * @param newDescription Description of assignment
      * @param newTotalPoints Total points of assignment
      */
-    public Assignment(String newName, String newDescription, double newTotalPoints ){
+    public Assignment(String newName, String newDescription, double newTotalPoints, String newDate) throws ParseException {
         name = newName;
         description = newDescription;
         totalPoints = newTotalPoints;
+        points = -1.00;
+    }
+
+    /**
+     * Assignment Constructor (Name,Description,Total Points, Date, Points Earned)
+     * @param newName
+     * @param newDescription
+     * @param newTotalPoints
+     */
+    public Assignment(String newName, String newDescription, double newTotalPoints, String newDate, double newPoints){
+        name = newName;
+        description = newDescription;
+        totalPoints = newTotalPoints;
+        points = newPoints;
+
     }
 
     //Accessors____________________________________________
@@ -99,14 +114,27 @@ public class Assignment {
      */
     public void setTotalPoints(double newTotal){totalPoints = newTotal;}
 
+    public void setDateDue(Date newDate){
+
+    }
+
     //Methods________________________________________________
 
     /**
-     * Returns number grade. Ex. 90/100 = 90
+     * Returns number grade with %. Ex. 90/100 = 90% if points is negative returns "-"
      * @return number grade
      */
-    public int generateGrade(){
-        return (int)((points/totalPoints)*100);
+    public String generateGrade(){
+        if(points>=0){
+            return "-";
+        }
+        else
+            return String.valueOf((int)((points/totalPoints)*100))+"%";
     }
 
+    public Date genereateDate(String strDate){
+        Date date = new Date();
+
+        return date;
+    }
 }
