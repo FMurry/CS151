@@ -6,14 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
 import com.sixamigos.sjsucanvasapp.home.HomeActivity;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by christopherbachner on 11/6/15.
