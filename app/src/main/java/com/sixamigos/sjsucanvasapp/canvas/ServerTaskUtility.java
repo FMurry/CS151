@@ -14,6 +14,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -94,21 +95,15 @@ public class ServerTaskUtility {
 
         try {
             // Add your data
-            String requestUrl = url;
+            String requestUrl = url + "?";
             Iterator iterator = data.entrySet().iterator();
             while (iterator.hasNext()) {
                 Map.Entry<String, String> entry = (Map.Entry) iterator.next();
-                BasicNameValuePair nameValuePair = new BasicNameValuePair(entry.getKey(), entry.getValue());
-                System.out.println(nameValuePair);
-                requestUrl += "?" + nameValuePair.getName() + "=" + nameValuePair.getValue();
+                requestUrl += entry.getKey() + "=" + entry.getValue() + "&";
             }
-            HttpGet httpget = new HttpGet(url);
+            HttpGet httpget = new HttpGet(requestUrl);
 
             // Execute HTTP Post Request
-            for (Header h : httpget.getAllHeaders()) {
-                System.out.println(h.toString());
-            }
-            System.out.println(httpget.getURI());
             HttpResponse response = httpclient.execute(httpget);
 
             // According to the JAVA API, InputStream constructor do nothing.
@@ -122,7 +117,6 @@ public class ServerTaskUtility {
             StringBuilder stringBuilder = new StringBuilder();
 
             String bufferedStrChunk = null;
-
             while((bufferedStrChunk = bufferedReader.readLine()) != null){
                 stringBuilder.append(bufferedStrChunk);
             }
@@ -130,7 +124,15 @@ public class ServerTaskUtility {
             //Log.d(TAG, stringBuilder.toString());
             String jsonString = stringBuilder.toString();
             System.out.println(jsonString);
-            return new JSONObject(jsonString.substring(0, jsonString.length())); // remove the while(1)
+
+            JSONObject returnObject = null;
+            try {
+                returnObject = new JSONObject(jsonString);
+            } catch (JSONException e) {
+                returnObject = new JSONObject();
+                returnObject.put("wrapped_array", new JSONArray(jsonString));
+            }
+            return returnObject;
 
         } catch (ClientProtocolException e) {
             e.printStackTrace();
