@@ -1,17 +1,9 @@
 .gradle/
-<<<<<<< HEAD
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-=======
 local.properties
 .idea/workspace.xml
 .idea/libraries
 .DS_Store
 build
->>>>>>> 187f21bd4d85f428f1a6651e8d82a41a6f64d324
 .idea
 *.bat
 *.iml
