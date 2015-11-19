@@ -69,7 +69,7 @@ public class ServerTaskUtility {
                 returnObject = new JSONObject(jsonString);
             } catch (JSONException e) {
                 returnObject = new JSONObject();
-                returnObject.put("wrapped_array", new JSONArray(jsonString));
+                returnObject.put("_wrapped_array", new JSONArray(jsonString));
             }
             return returnObject;
 
