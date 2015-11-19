@@ -3,7 +3,7 @@ package com.sixamigos.sjsucanvasapp.canvas;
 import org.json.JSONObject;
 
 /**
- * Created by Alex on 11/12/15.
+ * @author Alex Heritier
  */
 public interface CanvasCallback {
     void call(JSONObject data);

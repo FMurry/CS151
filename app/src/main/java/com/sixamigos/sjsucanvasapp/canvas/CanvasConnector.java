@@ -5,7 +5,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 /**
- * @author  Alex Heritier
+ * @author Alex Heritier
  */
 public class CanvasConnector {
     public static final String DEBUG_TOKEN = "12~1AcZXg0Gha4TSwP46lNAINjM0lOElWBV4qbyxxA4bVoN83dPddq9zGZGMRAGqQo6";

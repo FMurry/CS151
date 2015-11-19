@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Alex on 1/23/15.
+ * @author Alex Heritier
  */
 public class ServerTaskUtility {
     public static final String TAG = "ServerTaskUtility";
