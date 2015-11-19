@@ -1,7 +1,7 @@
 package com.sixamigos.sjsucanvasapp.canvas;
 
 /**
- * @author  Alex Heritier
+ * @author Alex Heritier
  */
 public class Course {
     private String name;
