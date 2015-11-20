@@ -3,7 +3,6 @@ package com.sixamigos.sjsucanvasapp.assignments;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 /**
  * Created by fredericmurry on 11/15/15.
@@ -49,9 +48,9 @@ public class Assignment {
 
     /**
      * Assignment Constructor (Name,Description,Total Points, Date, Points Earned)
-     * @param newName
-     * @param newDescription
-     * @param newTotalPoints
+     * @param newName Name of assignment
+     * @param newDescription Description of assignment
+     * @param newTotalPoints Total points of assignment
      */
     public Assignment(String newName, String newDescription, double newTotalPoints, String newDate, double newPoints){
         name = newName;
@@ -128,13 +127,18 @@ public class Assignment {
         if(points>=0){
             return "-";
         }
-        else
+        else{
+            if(totalPoints == 0){
+                totalPoints = 1;
+            }
             return String.valueOf((int)((points/totalPoints)*100))+"%";
+        }
+
     }
 
     public Date genereateDate(String strDate){
         Date date = new Date();
-
+        //Convert String following format into Date
         return date;
     }
 }
