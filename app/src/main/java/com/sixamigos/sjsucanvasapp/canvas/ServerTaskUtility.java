@@ -65,9 +65,9 @@ public class ServerTaskUtility {
             System.out.println(jsonString); // DEBUG
 
             JSONObject returnObject = null;
-            returnObject.put("_is_array", false);
             try {
                 returnObject = new JSONObject(jsonString);
+                returnObject.put("_is_array", false);
             } catch (JSONException e) {
                 returnObject = new JSONObject();
                 returnObject.put("_wrapped_array", new JSONArray(jsonString));
