@@ -62,7 +62,6 @@ public class ServerTaskUtility {
 
             //Log.d(TAG, stringBuilder.toString());
             String jsonString = stringBuilder.toString();
-            System.out.println(jsonString); // DEBUG
 
             JSONObject returnObject = null;
             try {
