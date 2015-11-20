@@ -7,6 +7,7 @@
 *.iml
 local.properties
 build/
+app/local.properties
 app/*.apk
 app/app.iml
 app/gradle/
