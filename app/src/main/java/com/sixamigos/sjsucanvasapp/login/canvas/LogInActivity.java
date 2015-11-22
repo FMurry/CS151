@@ -35,8 +35,7 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        if (CanvasToken.readCanvasToken(new File(this.getCacheDir(), "accessToken.tmp")))
-        {
+        if (CanvasToken.readCanvasToken(new File(this.getCacheDir(), "accessToken.tmp"))) {
             this.launchHome();
         } else {
             this.continueLogIn();
@@ -46,10 +45,9 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     /**
-     *Handles user input
+     * Handles user input
      */
-    private void continueLogIn()
-    {
+    private void continueLogIn() {
         final EditText logInEditText = (EditText) findViewById(R.id.logInEditText);
         final Button logInButton = (Button) findViewById(R.id.logInButton);
         final TextView errorText = (TextView) findViewById(R.id.logInErrorMessage);
@@ -111,14 +109,14 @@ public class LogInActivity extends AppCompatActivity {
     /**
      * Launches home instance
      */
-    private void launchHome()
-    {
+    private void launchHome() {
         Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
     }
 
     /**
      * Launches the webview for the user to be able to generate the token manually.
+     *
      * @param view
      */
     public void requestAccess(View view) {
@@ -127,6 +125,7 @@ public class LogInActivity extends AppCompatActivity {
 
     /**
      * Allows user to skip setup to only use non-canvas features.
+     *
      * @param view
      */
     public void skipSetup(View view) {
