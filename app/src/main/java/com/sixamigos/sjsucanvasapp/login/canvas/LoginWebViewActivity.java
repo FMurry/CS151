@@ -16,6 +16,7 @@ public class LoginWebViewActivity extends AppCompatActivity {
 
     /**
      * Shows the webview for the user, so the user can manually generate and copy the access token.
+     *
      * @param savedInstanceState
      */
     @Override
@@ -33,8 +34,7 @@ public class LoginWebViewActivity extends AppCompatActivity {
     /**
      * Launches help activity.
      */
-    protected void showHelp()
-    {
+    protected void showHelp() {
         //Intent i = new Intent(this, HomeActivity.class);
         //startActivity(i);
     }
