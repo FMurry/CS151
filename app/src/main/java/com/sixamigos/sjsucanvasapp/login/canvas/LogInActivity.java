@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -13,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.sixamigos.sjsucanvasapp.R;
+import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
+import com.sixamigos.sjsucanvasapp.courses.Course;
 import com.sixamigos.sjsucanvasapp.home.HomeActivity;
 
 import org.w3c.dom.Text;
@@ -41,8 +44,6 @@ public class LogInActivity extends AppCompatActivity {
         } else {
             this.continueLogIn();
         }
-
-
     }
 
     /**
@@ -84,7 +85,6 @@ public class LogInActivity extends AppCompatActivity {
 
         //Used to fix wrong status bar color
         this.getWindow().setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
-
     }
 
     /**
@@ -133,7 +133,6 @@ public class LogInActivity extends AppCompatActivity {
         CanvasToken.setCanvasToken("LOCAL", new File(this.getCacheDir(), "accessToken.tmp"));
         this.launchHome();
     }
-
 }
 
 
