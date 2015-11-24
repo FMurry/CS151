@@ -11,16 +11,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class HelpScreen extends AppCompatActivity {
 
-    TextView text;
+    @Bind(R.id.text) TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_screen);
-        text = (TextView)findViewById(R.id.text);
+        ButterKnife.bind(this);
+
         try {
             InputStream in = getAssets().open("FAQ.txt");
             BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
@@ -28,7 +32,7 @@ public class HelpScreen extends AppCompatActivity {
             StringBuilder buff = new StringBuilder();
             while((line = reader.readLine()) != null)
                 buff.append(line + "\n");
-            text.setText(buff);
+            mTextView.setText(buff);
             in.close();
             reader.close();
 

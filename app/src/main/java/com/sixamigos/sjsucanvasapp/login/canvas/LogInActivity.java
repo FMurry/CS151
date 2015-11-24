@@ -5,28 +5,28 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.sixamigos.sjsucanvasapp.R;
-import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
-import com.sixamigos.sjsucanvasapp.courses.Course;
 import com.sixamigos.sjsucanvasapp.home.HomeActivity;
 
-import org.w3c.dom.Text;
-
 import java.io.File;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by christopherbachner on 11/6/15.
  */
 
 public class LogInActivity extends AppCompatActivity {
+
+    @Bind(R.id.logInEditText) EditText mLogInEditText;
+    @Bind(R.id.logInButton) Button mLogInButton;
+    @Bind(R.id.logInErrorMessage) TextView mErrorText;
 
     /**
      * Checks if a session file is already existing.
@@ -37,6 +37,7 @@ public class LogInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+        ButterKnife.bind(this);
 
         if (CanvasToken.readCanvasToken(new File(this.getCacheDir(), "accessToken.tmp"))) {
             this.launchHome();
@@ -49,15 +50,10 @@ public class LogInActivity extends AppCompatActivity {
      * Handles user input
      */
     private void continueLogIn() {
-        final EditText logInEditText = (EditText) findViewById(R.id.logInEditText);
-        final Button logInButton = (Button) findViewById(R.id.logInButton);
-        final TextView errorText = (TextView) findViewById(R.id.logInErrorMessage);
-
-
-        errorText.setVisibility(View.INVISIBLE);
-        logInButton.setEnabled(false);
-        logInEditText.requestFocus();
-        logInEditText.addTextChangedListener(new TextWatcher() {
+        mErrorText.setVisibility(View.INVISIBLE);
+        mLogInButton.setEnabled(false);
+        mLogInEditText.requestFocus();
+        mLogInEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -65,12 +61,12 @@ public class LogInActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (logInEditText.length() == 67) {
-                    logInButton.setEnabled(true);
-                    errorText.setVisibility(TextView.INVISIBLE);
+                if (mLogInEditText.length() == 67) {
+                    mLogInButton.setEnabled(true);
+                    mErrorText.setVisibility(TextView.INVISIBLE);
                 } else {
-                    logInButton.setEnabled(false);
-                    errorText.setVisibility(TextView.VISIBLE);
+                    mLogInButton.setEnabled(false);
+                    mErrorText.setVisibility(TextView.VISIBLE);
 
                 }
             }
@@ -91,16 +87,14 @@ public class LogInActivity extends AppCompatActivity {
      * @param view
      */
     public void logIn(View view) {
-        EditText logInEditText = (EditText) findViewById(R.id.logInEditText);
-        TextView errorText = (TextView) findViewById(R.id.logInErrorMessage);
-        String errorString = errorText.getText().toString();
+        String errorString = mErrorText.getText().toString();
 
-        if (logInEditText.length() == 0 || logInEditText.length() != 67) {
+        if (mLogInEditText.length() == 0 || mLogInEditText.length() != 67) {
 
-            errorText.setText(errorString + logInEditText.length());
-            errorText.setVisibility(TextView.VISIBLE);
+            mErrorText.setText(errorString + mLogInEditText.length());
+            mErrorText.setVisibility(TextView.VISIBLE);
         } else {
-            CanvasToken.setCanvasToken(logInEditText.getText().toString(), new File(this.getCacheDir(), "accessToken.tmp"));
+            CanvasToken.setCanvasToken(mLogInEditText.getText().toString(), new File(this.getCacheDir(), "accessToken.tmp"));
             this.launchHome();
         }
 

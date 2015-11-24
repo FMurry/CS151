@@ -14,15 +14,24 @@ import com.sixamigos.sjsucanvasapp.assignments.AssignmentsFragment;
 import com.sixamigos.sjsucanvasapp.courses.CoursesFragment;
 import com.sixamigos.sjsucanvasapp.parse.Credentials;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by Jason Safaiyeh
  **/
 public class HomeActivity extends AppCompatActivity {
 
+    @Bind(R.id.toolbar) Toolbar mToolbar;
+    @Bind(R.id.viewpager) ViewPager mViewPager;
+    @Bind(R.id.tabs) TabLayout mTabLayout;
+    @Bind(R.id.fab) FloatingActionButton mFloatingActionButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        ButterKnife.bind(this);
 
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
@@ -31,21 +40,17 @@ public class HomeActivity extends AppCompatActivity {
         Credentials parseCredentials = new Credentials();
         Parse.initialize(this, parseCredentials.getToken1(), parseCredentials.getToken2());
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle("Canvas Client");
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        if (viewPager != null) {
-            setupViewPager(viewPager);
+        mToolbar.setTitle("Home");
+
+        if (mViewPager != null) {
+            setupViewPager(mViewPager);
         }
 
-
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        if (viewPager != null) {
-            tabLayout.setupWithViewPager(viewPager);
+        if (mViewPager != null) {
+            mTabLayout.setupWithViewPager(mViewPager);
         }
 
-        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //set functionality of button
