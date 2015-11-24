@@ -123,8 +123,20 @@ public class Assignment {
      *
      * @return number grade
      */
-    public int generateGrade() {
-        return (int) ((points / totalPoints) * 100);
+    public double generateGrade() {
+       if(totalPoints<=0){
+         totalPoints = 1;
+       }
+        return (points/totalPoints)*100;
     }
 
+    public String displayGrade() {
+        if (totalPoints <= 0) {
+            totalPoints = 1;
+        }
+        if (points < 0) {
+            return "-";
+        } else
+            return String.valueOf((points / totalPoints) * 100);
+    }
 }
