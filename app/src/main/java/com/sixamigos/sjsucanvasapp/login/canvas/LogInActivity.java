@@ -7,6 +7,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -59,7 +60,6 @@ public class LogInActivity extends AppCompatActivity {
      */
     private void continueLogIn() {
         mLogInButton.setEnabled(false);
-        mAccessCodeTextInputLayout.setError(getString(R.string.logInErrorText));
         mLogInEditText.requestFocus();
         mLogInEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -69,18 +69,18 @@ public class LogInActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (mLogInEditText.length() == 67) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.length() == 67) {
                     mLogInButton.setEnabled(true);
                     mAccessCodeTextInputLayout.setErrorEnabled(false);
                 } else {
                     mLogInButton.setEnabled(false);
                     mAccessCodeTextInputLayout.setErrorEnabled(true);
+                    mAccessCodeTextInputLayout.setError(getString(R.string.logInErrorText));
                 }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
             }
         });
 
@@ -93,7 +93,7 @@ public class LogInActivity extends AppCompatActivity {
      */
     public void logIn(View view) {
         if (mLogInEditText.length() == 0 || mLogInEditText.length() != 67) {
-            mAccessCodeTextInputLayout.setErrorEnabled(true);
+          //  mAccessCodeTextInputLayout.setErrorEnabled(true);
         } else {
             CanvasToken.setCanvasToken(mLogInEditText.getText().toString(), new File(this.getCacheDir(), "accessToken.tmp"));
             this.launchHome();
