@@ -15,11 +15,9 @@ import android.widget.Spinner;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.parse.Parse;
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.assignments.AssignmentsFragment;
 import com.sixamigos.sjsucanvasapp.courses.CoursesFragment;
-import com.sixamigos.sjsucanvasapp.parse.Credentials;
 
 import java.util.ArrayList;
 
@@ -31,21 +29,20 @@ import butterknife.ButterKnife;
  **/
 public class HomeActivity extends AppCompatActivity {
 
-    @Bind(R.id.toolbar) Toolbar mToolbar;
-    @Bind(R.id.viewpager) ViewPager mViewPager;
-    @Bind(R.id.tabs) TabLayout mTabLayout;
-    @Bind(R.id.fab) FloatingActionButton mFloatingActionButton;
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
+    @Bind(R.id.viewpager)
+    ViewPager mViewPager;
+    @Bind(R.id.tabs)
+    TabLayout mTabLayout;
+    @Bind(R.id.fab)
+    FloatingActionButton mFloatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-
-        // init token
-        Credentials parseCredentials = new Credentials();
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this, parseCredentials.getToken1(), parseCredentials.getToken2());
 
         mToolbar.setTitle("Home");
 
@@ -82,50 +79,50 @@ public class HomeActivity extends AppCompatActivity {
 
     private void showCourseDialog() {
         new MaterialDialog.Builder(this)
-            .title("Add a Course")
-            .customView(R.layout.dialog_content_add_course, true)
-            .positiveText("Add")
-            .positiveColor(getResources().getColor(android.R.color.black))
-            .onPositive(new MaterialDialog.SingleButtonCallback() {
-                @Override
-                public void onClick(MaterialDialog dialog, DialogAction which) {
-                    EditText mAddCourseEditText = (EditText) dialog.getCustomView().findViewById(R.id.input_course_name);
-                    String courseName = mAddCourseEditText.getText().toString();
-                }
-            })
-            .negativeText("Cancel")
-            .negativeColor(getResources().getColor(android.R.color.black))
-            .show();
+                .title("Add a Course")
+                .customView(R.layout.dialog_content_add_course, true)
+                .positiveText("Add")
+                .positiveColor(getResources().getColor(android.R.color.black))
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(MaterialDialog dialog, DialogAction which) {
+                        EditText mAddCourseEditText = (EditText) dialog.getCustomView().findViewById(R.id.input_course_name);
+                        String courseName = mAddCourseEditText.getText().toString();
+                    }
+                })
+                .negativeText("Cancel")
+                .negativeColor(getResources().getColor(android.R.color.black))
+                .show();
     }
 
     private void showAssignmentDialog() {
         new MaterialDialog.Builder(this)
-            .title("Add an Assignment")
-            .customView(setupAssignmentSpinner(), true)
-            .positiveText("Add")
-            .positiveColor(getResources().getColor(android.R.color.black))
-            .onPositive(new MaterialDialog.SingleButtonCallback() {
-                @Override
-                public void onClick(MaterialDialog dialog, DialogAction which) {
+                .title("Add an Assignment")
+                .customView(setupAssignmentSpinner(), true)
+                .positiveText("Add")
+                .positiveColor(getResources().getColor(android.R.color.black))
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(MaterialDialog dialog, DialogAction which) {
 
-                }
-            })
-            .negativeText("Cancel")
-            .negativeColor(getResources().getColor(android.R.color.black))
-            .show();
+                    }
+                })
+                .negativeText("Cancel")
+                .negativeColor(getResources().getColor(android.R.color.black))
+                .show();
     }
 
     private View setupAssignmentSpinner() {
         View view = getLayoutInflater().inflate(R.layout.dialog_content_add_assignment, null);
 
         Spinner spinner = (Spinner) view.findViewById(R.id.input_spinner_assignment_name);
-        String[] data = new String[] {
-            "Test Class 1", "Test Class 2", "Test Class 3"
+        String[] data = new String[]{
+                "Test Class 1", "Test Class 2", "Test Class 3"
         };
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-            android.R.layout.simple_spinner_item, data);
+                android.R.layout.simple_spinner_item, data);
         spinner.setAdapter(adapter);
-        
+
         return view;
     }
 
