@@ -9,15 +9,17 @@ import android.view.ViewGroup;
 
 import com.sixamigos.sjsucanvasapp.R;
 
-/** Created by Jason Safaiyeh **/
+/**
+ * Created by Jason Safaiyeh
+ **/
 
 public class CoursesFragment extends Fragment {
 
-  @Nullable
-  @Override
-  public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
-      savedInstanceState) {
-    View view = inflater.inflate(R.layout.fragment_courses, container, false);
-    return view;
-  }
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
+            savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_courses, container, false);
+        return view;
+    }
 }

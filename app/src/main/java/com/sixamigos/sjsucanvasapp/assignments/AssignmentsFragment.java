@@ -9,13 +9,13 @@ import android.view.ViewGroup;
 
 import com.sixamigos.sjsucanvasapp.R;
 
-public class AssignmentsFragment extends Fragment{
+public class AssignmentsFragment extends Fragment {
 
-  @Nullable
-  @Override
-  public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
-      savedInstanceState) {
-    View view = inflater.inflate(R.layout.fragment_assignments, container, false);
-    return view;
-  }
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
+            savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_assignments, container, false);
+        return view;
+    }
 }
