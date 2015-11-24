@@ -2,6 +2,8 @@ package com.sixamigos.sjsucanvasapp.assignments;
 
 /**
  * Created by fredericmurry on 11/15/15.
+ *
+ *
  */
 public class Assignment {
 
