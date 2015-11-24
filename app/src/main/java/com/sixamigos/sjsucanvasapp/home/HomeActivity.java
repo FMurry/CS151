@@ -11,8 +11,6 @@ import android.view.View;
 import com.parse.Parse;
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.assignments.AssignmentsFragment;
-import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
-import com.sixamigos.sjsucanvasapp.courses.Course;
 import com.sixamigos.sjsucanvasapp.courses.CoursesFragment;
 import com.sixamigos.sjsucanvasapp.parse.Credentials;
 
