@@ -69,10 +69,6 @@ public class LogInActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
                 if (s.length() == 67) {
                     mLogInButton.setEnabled(true);
                     mAccessCodeTextInputLayout.setErrorEnabled(false);
@@ -81,6 +77,10 @@ public class LogInActivity extends AppCompatActivity {
                     mAccessCodeTextInputLayout.setErrorEnabled(true);
                     mAccessCodeTextInputLayout.setError(getString(R.string.logInErrorText));
                 }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
             }
         });
 

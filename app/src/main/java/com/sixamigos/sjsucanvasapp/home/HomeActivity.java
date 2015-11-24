@@ -3,16 +3,25 @@ package com.sixamigos.sjsucanvasapp.home;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.parse.Parse;
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.assignments.AssignmentsFragment;
 import com.sixamigos.sjsucanvasapp.courses.CoursesFragment;
 import com.sixamigos.sjsucanvasapp.parse.Credentials;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,11 +42,9 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
 
-        // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
-
         // init token
         Credentials parseCredentials = new Credentials();
+        Parse.enableLocalDatastore(this);
         Parse.initialize(this, parseCredentials.getToken1(), parseCredentials.getToken2());
 
         mToolbar.setTitle("Home");
@@ -50,12 +57,7 @@ public class HomeActivity extends AppCompatActivity {
             mTabLayout.setupWithViewPager(mViewPager);
         }
 
-        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //set functionality of button
-            }
-        });
+        setupFloatingActionButton();
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -63,5 +65,72 @@ public class HomeActivity extends AppCompatActivity {
         adapter.addFragment(new CoursesFragment(), "Courses");
         adapter.addFragment(new AssignmentsFragment(), "Assignments");
         viewPager.setAdapter(adapter);
+    }
+
+    private void setupFloatingActionButton() {
+        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mTabLayout.getSelectedTabPosition() == 0) {
+                    showCourseDialog();
+                } else if (mTabLayout.getSelectedTabPosition() == 1) {
+                    showAssignmentDialog();
+                }
+            }
+        });
+    }
+
+    private void showCourseDialog() {
+        new MaterialDialog.Builder(this)
+            .title("Add a Course")
+            .customView(R.layout.dialog_content_add_course, true)
+            .positiveText("Add")
+            .positiveColor(getResources().getColor(android.R.color.black))
+            .onPositive(new MaterialDialog.SingleButtonCallback() {
+                @Override
+                public void onClick(MaterialDialog dialog, DialogAction which) {
+                    EditText mAddCourseEditText = (EditText) dialog.getCustomView().findViewById(R.id.input_course_name);
+                    String courseName = mAddCourseEditText.getText().toString();
+                }
+            })
+            .negativeText("Cancel")
+            .negativeColor(getResources().getColor(android.R.color.black))
+            .show();
+    }
+
+    private void showAssignmentDialog() {
+        new MaterialDialog.Builder(this)
+            .title("Add an Assignment")
+            .customView(setupAssignmentSpinner(), true)
+            .positiveText("Add")
+            .positiveColor(getResources().getColor(android.R.color.black))
+            .onPositive(new MaterialDialog.SingleButtonCallback() {
+                @Override
+                public void onClick(MaterialDialog dialog, DialogAction which) {
+
+                }
+            })
+            .negativeText("Cancel")
+            .negativeColor(getResources().getColor(android.R.color.black))
+            .show();
+    }
+
+    private View setupAssignmentSpinner() {
+        View view = getLayoutInflater().inflate(R.layout.dialog_content_add_assignment, null);
+
+        Spinner spinner = (Spinner) view.findViewById(R.id.input_spinner_assignment_name);
+        String[] data = new String[] {
+            "Test Class 1", "Test Class 2", "Test Class 3"
+        };
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+            android.R.layout.simple_spinner_item, data);
+        spinner.setAdapter(adapter);
+        
+        return view;
+    }
+
+    @Override
+    public void onBackPressed() {
+        //Do Nothing
     }
 }
