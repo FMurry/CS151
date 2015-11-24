@@ -14,8 +14,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.parse.Parse;
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.home.HomeActivity;
+import com.sixamigos.sjsucanvasapp.parse.Credentials;
 
 import java.io.File;
 
@@ -42,6 +44,11 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         ButterKnife.bind(this);
+
+        // init token
+        Credentials parseCredentials = new Credentials();
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, parseCredentials.getToken1(), parseCredentials.getToken2());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
