@@ -1,6 +1,6 @@
 App name: SJSUCanvasApp
 Version: 1.3.8c
-Creators: This app was created and maintain by Alex Heritier, Christopher Bachner, Frederic Murry, Kevin Hou, and Khoa Vo
+Creators: This app was created and maintain by Alex Heritier, Christopher Bachner, Frederic Murry, Jason Safaiyeh, Kevin Hou and Khoa Vo
 
 App description: This application allows user to import their grade, class's information, and list of assignments from San Jose State
 canvas server. It will also allows user to create informations for classes that aren't on the canvas website.
