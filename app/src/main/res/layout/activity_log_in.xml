@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Christopher Bachner on 11/12/2015 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:clickable="false">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:clickable="false">
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,28 +44,27 @@
         android:singleLine="false"
         android:textAlignment="center" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/logInErrorText"
-        android:id="@+id/logInErrorMessage"
-        android:textColor="#FF0000"
-        android:textAlignment="center" />
-
     <LinearLayout
         android:orientation="horizontal"
+        android:layout_marginTop="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_access_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/logInEditText"
-            android:layout_gravity="center_horizontal"
-            android:inputType="text"
-            android:hint="@string/logInTextDescription"/>
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <EditText
+                android:id="@+id/logInEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:selectAllOnFocus="false"
+                android:hint="Access Code" />
+
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 

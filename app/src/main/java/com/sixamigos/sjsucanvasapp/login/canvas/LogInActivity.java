@@ -2,6 +2,7 @@ package com.sixamigos.sjsucanvasapp.login.canvas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,7 +27,7 @@ public class LogInActivity extends AppCompatActivity {
 
     @Bind(R.id.logInEditText) EditText mLogInEditText;
     @Bind(R.id.logInButton) Button mLogInButton;
-    @Bind(R.id.logInErrorMessage) TextView mErrorText;
+    @Bind(R.id.input_layout_access_code) TextInputLayout mAccessCodeTextInputLayout;
 
     /**
      * Checks if a session file is already existing.
@@ -40,9 +41,9 @@ public class LogInActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         if (CanvasToken.readCanvasToken(new File(this.getCacheDir(), "accessToken.tmp"))) {
-            this.launchHome();
+            launchHome();
         } else {
-            this.continueLogIn();
+            continueLogIn();
         }
     }
 
@@ -50,8 +51,8 @@ public class LogInActivity extends AppCompatActivity {
      * Handles user input
      */
     private void continueLogIn() {
-        mErrorText.setVisibility(View.INVISIBLE);
         mLogInButton.setEnabled(false);
+        mAccessCodeTextInputLayout.setError(getString(R.string.logInErrorText));
         mLogInEditText.requestFocus();
         mLogInEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -63,11 +64,10 @@ public class LogInActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (mLogInEditText.length() == 67) {
                     mLogInButton.setEnabled(true);
-                    mErrorText.setVisibility(TextView.INVISIBLE);
+                    mAccessCodeTextInputLayout.setErrorEnabled(false);
                 } else {
                     mLogInButton.setEnabled(false);
-                    mErrorText.setVisibility(TextView.VISIBLE);
-
+                    mAccessCodeTextInputLayout.setErrorEnabled(true);
                 }
             }
 
@@ -77,8 +77,6 @@ public class LogInActivity extends AppCompatActivity {
             }
         });
 
-        //Used to fix wrong status bar color
-        this.getWindow().setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
     }
 
     /**
@@ -87,12 +85,8 @@ public class LogInActivity extends AppCompatActivity {
      * @param view
      */
     public void logIn(View view) {
-        String errorString = mErrorText.getText().toString();
-
         if (mLogInEditText.length() == 0 || mLogInEditText.length() != 67) {
-
-            mErrorText.setText(errorString + mLogInEditText.length());
-            mErrorText.setVisibility(TextView.VISIBLE);
+            mAccessCodeTextInputLayout.setErrorEnabled(true);
         } else {
             CanvasToken.setCanvasToken(mLogInEditText.getText().toString(), new File(this.getCacheDir(), "accessToken.tmp"));
             this.launchHome();

@@ -12,4 +12,5 @@
     <string name="logInWebViewInstruction">Please generate an access code and copy it to the clipboard.</string>
     <string name="loginHelpButton">HELP</string>
     <string name="title_activity_help_screen">Questions and Answers</string>
+    <string name="input_course_name">Course Name</string>
 </resources>
