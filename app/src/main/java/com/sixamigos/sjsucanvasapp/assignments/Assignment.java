@@ -130,6 +130,10 @@ public class Assignment {
         return (points/totalPoints)*100;
     }
 
+    /**
+     * Generates String grade if not yet graded points should be negative so - is displayed
+     * @return Grade to be displayed
+     */
     public String displayGrade() {
         if (totalPoints <= 0) {
             totalPoints = 1;
