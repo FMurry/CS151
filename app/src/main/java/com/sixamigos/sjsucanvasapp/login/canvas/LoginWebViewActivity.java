@@ -19,9 +19,8 @@ import butterknife.ButterKnife;
  * Modify by Khoa Vo on 11/28/15
  */
 public class LoginWebViewActivity extends AppCompatActivity {
-    Button helpButton;
-
     @Bind(R.id.logInWebView) WebView mWebView;
+    @Bind(R.id.logInHelpButton) Button helpButton;
 
     /**
      * Shows the webview for the user, so the user can manually generate and copy the access token.
@@ -44,7 +43,6 @@ public class LoginWebViewActivity extends AppCompatActivity {
      * Launches help activity.
      */
     protected void showHelp() {
-        helpButton = (Button) findViewById(R.id.logInHelpButton);
         helpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
