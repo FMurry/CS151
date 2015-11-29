@@ -1,10 +1,12 @@
 package com.sixamigos.sjsucanvasapp.helpscreen;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.sixamigos.sjsucanvasapp.R;
+import com.sixamigos.sjsucanvasapp.login.canvas.LoginWebViewActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,6 +15,10 @@ import java.io.InputStreamReader;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+
+/**
+ * Created by Khoa Vo on 11/20/15.
+ */
 
 public class HelpScreen extends AppCompatActivity {
 
@@ -44,6 +50,8 @@ public class HelpScreen extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        Intent i = new Intent(HelpScreen.this, LoginWebViewActivity.class);
+        startActivity(i);
+        finish();
     }
 }
