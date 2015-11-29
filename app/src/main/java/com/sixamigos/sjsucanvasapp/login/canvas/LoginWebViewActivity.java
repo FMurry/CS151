@@ -9,18 +9,20 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import com.sixamigos.sjsucanvasapp.R;
-import com.sixamigos.sjsucanvasapp.helpscreen.HelpScreen;
+import com.sixamigos.sjsucanvasapp.login.helpscreen.HelpScreen;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
  * Created by christopherbachner on 11/12/15.
- * Modify by Khoa Vo on 11/28/15
+ * Modified by Khoa Vo on 11/28/15 (Connected helpScreen with button)
  */
 public class LoginWebViewActivity extends AppCompatActivity {
-    @Bind(R.id.logInWebView) WebView mWebView;
-    @Bind(R.id.logInHelpButton) Button helpButton;
+    @Bind(R.id.logInWebView)
+    WebView mWebView;
+    @Bind(R.id.logInHelpButton)
+    Button helpButton;
 
     /**
      * Shows the webview for the user, so the user can manually generate and copy the access token.
@@ -36,22 +38,15 @@ public class LoginWebViewActivity extends AppCompatActivity {
         mWebView.setWebViewClient(new WebViewClient());
         mWebView.loadUrl("https://sjsu.instructure.com/profile/settings");
         mWebView.getSettings().setJavaScriptEnabled(true);
-        showHelp();
     }
 
     /**
      * Launches help activity.
      */
-    protected void showHelp() {
-        helpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(LoginWebViewActivity.this, HelpScreen.class);
-                startActivity(i);
-                finish();
-            }
-        });
-
+    public void showHelp(View view) {
+        Intent i = new Intent(LoginWebViewActivity.this, HelpScreen.class);
+        startActivity(i);
+        //finish();
 
 
     }

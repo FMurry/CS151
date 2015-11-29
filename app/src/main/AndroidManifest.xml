@@ -33,7 +33,7 @@
         <activity android:name=".home.HomeActivity" />
         <activity android:name=".login.canvas.LoginWebViewActivity" />
         <activity
-            android:name=".helpscreen.HelpScreen"
+            android:name=".login.helpscreen.HelpScreen"
             android:label="@string/title_activity_help_screen"
             android:theme="@style/AppTheme" >
         </activity>
