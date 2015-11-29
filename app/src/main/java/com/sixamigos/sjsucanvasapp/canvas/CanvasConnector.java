@@ -1,5 +1,6 @@
 package com.sixamigos.sjsucanvasapp.canvas;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.sixamigos.sjsucanvasapp.courses.Course;
@@ -9,7 +10,9 @@ import com.sixamigos.sjsucanvasapp.login.canvas.CanvasToken;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author Alex Heritier
@@ -17,8 +20,10 @@ import java.util.HashMap;
 public class CanvasConnector {
     private static final String TAG = "canvas.CanvasConnector";
     private CanvasConnectorCallback callback;
+    private Context context;
 
-    public CanvasConnector() {
+    public CanvasConnector(Context context) {
+        this.context = context;
     }
 
     /**
@@ -37,26 +42,24 @@ public class CanvasConnector {
 
         data.put("access_token", CanvasToken.getCanvasToken());
         data.put("enrollment_type", "student");
+        data.put("include", "total_scores");
 
-        GetCoursesTask getCoursesTask = new GetCoursesTask();
+        GetCoursesTask getCoursesTask = new GetCoursesTask(context);
         getCoursesTask.setCallback(new CanvasCallback() {
             @Override
             public void call(JSONObject data) {
                 try {
                     JSONArray courseArray = data.getJSONArray("_wrapped_array");
-                    int courseNum = 0;
+
+                    List<Course> courses = new ArrayList<>();
                     for (int i = 0; i < courseArray.length(); i++) {
                         JSONObject courseData = courseArray.getJSONObject(i);
-                        if (courseData.has("name")) courseNum++;
-                    }
-                    Course[] courses = new Course[courseNum];
-                    for (int i = 0; i < courseArray.length(); i++) {
-                        JSONObject courseData = courseArray.getJSONObject(i);
+                        Log.e("Course Data", courseData.toString());
                         if (courseData.has("name")) {
                             Course course = new Course();
-                            course.setCourseName(courseData.getString("name"));
+                            course.setCourseName(courseData.getString("course_code"));
                             course.setFullName(courseData.getString("name"));
-                            courses[i] = course;
+                            courses.add(course);
                         }
                     }
                     callback.onCoursesReceived(courses);
@@ -69,6 +72,6 @@ public class CanvasConnector {
     }
 
     public interface CanvasConnectorCallback {
-        public void onCoursesReceived(Course[] courses);
+        public void onCoursesReceived(List<Course> courses);
     }
 }
