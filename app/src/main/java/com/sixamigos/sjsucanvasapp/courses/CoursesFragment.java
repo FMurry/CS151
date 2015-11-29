@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.andexert.library.RippleView;
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
 import com.sixamigos.sjsucanvasapp.color.Colors;
@@ -86,9 +87,10 @@ public class CoursesFragment extends Fragment {
         return linearLayout;
     }
 
-    public CardView createCard(Course course, int colorCount) {
+    public View createCard(Course course, int colorCount) {
         View view =
             LayoutInflater.from(getContext()).inflate(R.layout.card_course, null);
+        RippleView rippleView = (RippleView) view.findViewById(R.id.ripple);
         CardView cardView = (CardView) view.findViewById(R.id.course_card_view);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -100,7 +102,7 @@ public class CoursesFragment extends Fragment {
             0,
             (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics()),
             0);
-        cardView.setLayoutParams(layoutParams);
+        rippleView.setLayoutParams(layoutParams);
         cardView.setBackgroundColor(getResources().getColor(Colors.getColor(colorCount)));
 
         String[] courseName = course.getFullName().split(" ");
@@ -125,6 +127,6 @@ public class CoursesFragment extends Fragment {
         TextView mGradeTextView = (TextView) view.findViewById(R.id.grade_text);
         mGradeTextView.setText(course.getGrade() + "%");
 
-        return cardView;
+        return rippleView;
     }
 }
