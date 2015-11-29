@@ -59,6 +59,11 @@ public class CanvasConnector {
                             Course course = new Course();
                             course.setCourseName(courseData.getString("course_code"));
                             course.setFullName(courseData.getString("name"));
+
+                            JSONArray enrollments = courseData.getJSONArray("enrollments");
+                            JSONObject enrollmentObject = (JSONObject) enrollments.get(0);
+                            course.setGrade(enrollmentObject.getDouble("computed_current_score"));
+
                             courses.add(course);
                         }
                     }
