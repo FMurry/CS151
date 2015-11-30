@@ -1,14 +1,10 @@
 package com.sixamigos.sjsucanvasapp.canvas;
 
-import android.util.Log;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,9 +26,6 @@ public class ServerTaskUtility {
     public static JSONObject sendData(String url, HashMap<String, String> data) throws JSONException {
         // Create a new HttpClient and Post Header
         HttpClient httpclient = new DefaultHttpClient();
-        HttpParams params = httpclient.getParams();
-        HttpConnectionParams.setConnectionTimeout(params, 3000);
-        HttpConnectionParams.setSoTimeout(params, 3000);
 
         try {
             // Add your data
@@ -42,7 +35,6 @@ public class ServerTaskUtility {
                 Map.Entry<String, String> entry = (Map.Entry) iterator.next();
                 requestUrl += entry.getKey() + "=" + entry.getValue() + "&";
             }
-            Log.e("URL", requestUrl);
             HttpGet httpget = new HttpGet(requestUrl);
 
             // Execute HTTP Post Request
@@ -63,10 +55,7 @@ public class ServerTaskUtility {
                 stringBuilder.append(bufferedStrChunk);
             }
 
-            //Log.d(TAG, stringBuilder.toString());
-            Log.e("URL", url);
             String jsonString = stringBuilder.toString();
-            Log.e("JSONSTRING", jsonString);
 
             JSONObject returnObject = null;
             try {

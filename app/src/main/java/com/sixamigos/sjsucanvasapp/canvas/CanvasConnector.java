@@ -95,13 +95,22 @@ public class CanvasConnector {
                 try {
 
                     Log.e("Assignments", data.toString());
-                    //JSONArray courseArray = data.getJSONArray("_wrapped_array");
+                    JSONArray assignmentArray = data.getJSONArray("_wrapped_array");
 
                     List<Assignment> assignments = new ArrayList<>();
-                   // for (int i = 0; i < courseArray.length(); i++) {
-
-                    //        //assignments.add(course);
-                    //    }
+                    for (int i = 0; i < assignmentArray.length(); i++) {
+                        JSONObject assignmentData = assignmentArray.getJSONObject(i);
+                        if (assignmentData.has("name")) {
+                            Assignment assignment = new Assignment();
+                            assignment.setName(assignmentData.getString("name"));
+                            assignment.setDescription(assignmentData.getString("description"));
+                            if (assignmentData.has("points"))
+                                assignment.setPoints(assignmentData.getDouble("points"));
+                            if (assignmentData.has("points_possible"))
+                                assignment.setTotalPoints(assignmentData.getDouble("points_possible"));
+                            assignments.add(assignment);
+                        }
+                    }
                     callback.onCoursesReceived(assignments);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -109,6 +118,7 @@ public class CanvasConnector {
             }
         });
         data.put("access_token", CanvasToken.getCanvasToken());
+        data.put("include", "assignment_overrides");
         getAssignmentsTask.execute(data);
     }
 
