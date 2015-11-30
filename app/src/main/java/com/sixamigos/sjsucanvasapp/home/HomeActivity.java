@@ -136,6 +136,7 @@ public class HomeActivity extends AppCompatActivity {
                         course.put("assignmentName", assignmentName);
 
                         course.pinInBackground();
+
                     }
                 })
                 .negativeText("Cancel")
