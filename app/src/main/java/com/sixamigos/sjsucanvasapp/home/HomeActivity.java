@@ -45,6 +45,8 @@ public class HomeActivity extends AppCompatActivity {
     @Bind(R.id.fab)
     FloatingActionButton mFloatingActionButton;
 
+    private View mAssigmentAddDialog;
+
     //
     private String mSelectedCourse;
 
@@ -56,6 +58,7 @@ public class HomeActivity extends AppCompatActivity {
 
         mToolbar.setTitle("Home");
 
+        mAssigmentAddDialog = setupAssignmentSpinner();
         if (mViewPager != null) {
             setupViewPager(mViewPager);
         }
@@ -116,7 +119,7 @@ public class HomeActivity extends AppCompatActivity {
     private void showAssignmentDialog() {
         new MaterialDialog.Builder(this)
                 .title("Add an Assignment")
-                .customView(setupAssignmentSpinner(), true)
+                .customView(mAssigmentAddDialog, true)
                 .positiveText("Add")
                 .positiveColor(getResources().getColor(android.R.color.black))
                 .onPositive(new MaterialDialog.SingleButtonCallback() {
@@ -129,10 +132,12 @@ public class HomeActivity extends AppCompatActivity {
                         Log.d("Assignment Name", assignmentName);
 
                         // determine which class was selected
-                        // TODO: Jason you gotta do this part cause IDK how to check which one the user selected
+                        Spinner spinner = (Spinner) mAssigmentAddDialog.findViewById(R.id.input_spinner_assignment_name);
+                        String courseName = spinner.getSelectedItem().toString();
+
 
                         // add assignment to selected course db
-                        ParseObject course = new ParseObject("CS151"); // TODO: selected courseName as argument
+                        ParseObject course = new ParseObject(courseName); // TODO: selected courseName as argument
                         course.put("assignmentName", assignmentName);
 
                         course.pinInBackground();
