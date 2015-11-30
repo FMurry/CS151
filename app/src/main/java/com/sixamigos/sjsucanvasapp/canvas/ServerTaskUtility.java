@@ -1,5 +1,7 @@
 package com.sixamigos.sjsucanvasapp.canvas;
 
+import android.util.Log;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -40,6 +42,7 @@ public class ServerTaskUtility {
                 Map.Entry<String, String> entry = (Map.Entry) iterator.next();
                 requestUrl += entry.getKey() + "=" + entry.getValue() + "&";
             }
+            Log.e("URL", requestUrl);
             HttpGet httpget = new HttpGet(requestUrl);
 
             // Execute HTTP Post Request
@@ -61,7 +64,9 @@ public class ServerTaskUtility {
             }
 
             //Log.d(TAG, stringBuilder.toString());
+            Log.e("URL", url);
             String jsonString = stringBuilder.toString();
+            Log.e("JSONSTRING", jsonString);
 
             JSONObject returnObject = null;
             try {

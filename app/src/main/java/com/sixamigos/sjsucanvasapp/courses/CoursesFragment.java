@@ -1,5 +1,6 @@
 package com.sixamigos.sjsucanvasapp.courses;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,7 +18,9 @@ import com.andexert.library.RippleView;
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
 import com.sixamigos.sjsucanvasapp.color.Colors;
+import com.sixamigos.sjsucanvasapp.home.HomeActivity;
 import com.sixamigos.sjsucanvasapp.login.canvas.CanvasLoginFailureException;
+import com.sixamigos.sjsucanvasapp.login.canvas.LogInActivity;
 
 import java.util.List;
 
@@ -48,7 +51,7 @@ public class CoursesFragment extends Fragment {
         CanvasConnector canvasConnector = new CanvasConnector(getContext());
         canvasConnector.setCallback(new CanvasConnector.CanvasConnectorCallback() {
             @Override
-            public void onCoursesReceived(List<Course> courses) {
+            public <T> void onCoursesReceived(List<T> courses) {
 
                 LinearLayout linearLayout = null;
 
@@ -59,7 +62,7 @@ public class CoursesFragment extends Fragment {
                         linearLayout = createLinearLayout();
                     }
 
-                    linearLayout.addView(createCard(courses.get(i), colorCount));
+                    linearLayout.addView(createCard((Course)courses.get(i), colorCount));
                     colorCount++;
 
                     if (i % 2 == 0) {
@@ -87,7 +90,7 @@ public class CoursesFragment extends Fragment {
         return linearLayout;
     }
 
-    public View createCard(Course course, int colorCount) {
+    public View createCard(final Course course, int colorCount) {
         View view =
             LayoutInflater.from(getContext()).inflate(R.layout.card_course, null);
         CardView cardView = (CardView) view.findViewById(R.id.course_card_view);
@@ -129,7 +132,9 @@ public class CoursesFragment extends Fragment {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(getContext(), CourseActivity.class);
+                i.putExtra("COURSE", course);
+                startActivity(i);
             }
         });
 

@@ -3,6 +3,7 @@ package com.sixamigos.sjsucanvasapp.canvas;
 import android.content.Context;
 import android.util.Log;
 
+import com.sixamigos.sjsucanvasapp.assignments.Assignment;
 import com.sixamigos.sjsucanvasapp.courses.Course;
 import com.sixamigos.sjsucanvasapp.login.canvas.CanvasLoginFailureException;
 import com.sixamigos.sjsucanvasapp.login.canvas.CanvasToken;
@@ -21,9 +22,15 @@ public class CanvasConnector {
     private static final String TAG = "canvas.CanvasConnector";
     private CanvasConnectorCallback callback;
     private Context context;
+    private int id;
 
     public CanvasConnector(Context context) {
+        this(context, -1);
+    }
+
+    public CanvasConnector(Context context, int id) {
         this.context = context;
+        this.id = id;
     }
 
     /**
@@ -59,6 +66,7 @@ public class CanvasConnector {
                             Course course = new Course();
                             course.setCourseName(courseData.getString("course_code"));
                             course.setFullName(courseData.getString("name"));
+                            course.setId(courseData.getInt("id"));
 
                             JSONArray enrollments = courseData.getJSONArray("enrollments");
                             JSONObject enrollmentObject = (JSONObject) enrollments.get(0);
@@ -76,7 +84,35 @@ public class CanvasConnector {
         getCoursesTask.execute(data);
     }
 
+    /**
+     * Make the server request to get the assignment data and then pass it to the callback object;
+     */
+    public void getAssignments(HashMap<String, String> data) throws CanvasLoginFailureException {
+        GetAssignmentsTask getAssignmentsTask = new GetAssignmentsTask(context, id);
+        getAssignmentsTask.setCallback(new CanvasCallback() {
+            @Override
+            public void call(JSONObject data) {
+                try {
+
+                    Log.e("Assignments", data.toString());
+                    //JSONArray courseArray = data.getJSONArray("_wrapped_array");
+
+                    List<Assignment> assignments = new ArrayList<>();
+                   // for (int i = 0; i < courseArray.length(); i++) {
+
+                    //        //assignments.add(course);
+                    //    }
+                    callback.onCoursesReceived(assignments);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        data.put("access_token", CanvasToken.getCanvasToken());
+        getAssignmentsTask.execute(data);
+    }
+
     public interface CanvasConnectorCallback {
-        public void onCoursesReceived(List<Course> courses);
+        <T> void onCoursesReceived(List<T> data);
     }
 }
