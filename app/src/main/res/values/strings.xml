@@ -14,4 +14,5 @@
     <string name="title_activity_help_screen">Questions and Answers</string>
     <string name="input_course_name">Course Name</string>
     <string name="input_assignment_name">Assignment Name</string>
+    <string name="course_filler_text">CS 151</string>
 </resources>
