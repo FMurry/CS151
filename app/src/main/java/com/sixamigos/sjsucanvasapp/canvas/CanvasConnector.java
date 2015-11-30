@@ -104,10 +104,10 @@ public class CanvasConnector {
                             Assignment assignment = new Assignment();
                             assignment.setName(assignmentData.getString("name"));
                             assignment.setDescription(assignmentData.getString("description"));
-                            if (assignmentData.has("points"))
-                                assignment.setPoints(assignmentData.getDouble("points"));
                             if (assignmentData.has("points_possible"))
                                 assignment.setTotalPoints(assignmentData.getDouble("points_possible"));
+                            else assignment.setTotalPoints(0);
+                            assignment.setDueDate(assignmentData.getString("due_at"));
                             assignments.add(assignment);
                         }
                     }
@@ -118,7 +118,6 @@ public class CanvasConnector {
             }
         });
         data.put("access_token", CanvasToken.getCanvasToken());
-        data.put("include", "assignment_overrides");
         getAssignmentsTask.execute(data);
     }
 
