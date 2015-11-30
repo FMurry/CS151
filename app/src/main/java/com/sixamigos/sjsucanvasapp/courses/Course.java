@@ -1,14 +1,17 @@
 package com.sixamigos.sjsucanvasapp.courses;
 
+import android.os.Parcelable;
+
 import com.sixamigos.sjsucanvasapp.assignments.*;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Frederic Murry on 11/12/15.
  * Course Object
  */
-public class Course {
+public class Course implements Serializable{
 
     private int id;
     private String courseName; //Ex: 151
@@ -167,6 +170,14 @@ public class Course {
      */
     public void setUnits(int newUnits) {
         units = newUnits;
+    }
+
+    /**
+     * Set the id.
+     * @param id
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
 

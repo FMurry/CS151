@@ -9,6 +9,7 @@ public class Assignment {
     private double points;// points received
     private double totalPoints;//total points assignment is worth
     private String description;
+    private String dueDate;
 
     // CONTSTRUCTORS_______________________________________
 
@@ -77,6 +78,14 @@ public class Assignment {
         return description;
     }
 
+    /**
+     * Access Due date of the assignment
+     * @return
+     */
+    public String getDueDate() {
+        return dueDate;
+    }
+
 
     //Mutators_______________________________________________
 
@@ -114,6 +123,15 @@ public class Assignment {
      */
     public void setTotalPoints(double newTotal) {
         totalPoints = newTotal;
+    }
+
+    /**
+     * Set due date of assignment
+     *
+     * @param newDueDate
+     */
+    public void setDueDate(String newDueDate) {
+        dueDate = newDueDate;
     }
 
     //Methods________________________________________________
