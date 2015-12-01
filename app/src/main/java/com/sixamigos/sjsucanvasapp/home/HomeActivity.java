@@ -110,8 +110,6 @@ public class HomeActivity extends AppCompatActivity {
                         // save to Parse (local)
                         courses.saveInBackground();
                         //course.pinInBackground(); // this can be changed to saveInBackground() to upload to Parse cloud
-
-                        // TODO: Update spinner to show most updated course list.
                     }
                 })
                 .negativeText("Cancel")
@@ -120,6 +118,30 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void showAssignmentDialog() {
+        final Spinner spinner = (Spinner) mAssigmentAddDialog.findViewById(R.id.input_spinner_assignment_name);
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Courses");
+        query.whereExists("courseName");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null) {
+
+                    ArrayList<String> database = new ArrayList<>();
+                    for (ParseObject course : objects) { // retrieve from database
+                        database.add(course.getString("courseName"));
+                    }
+
+                    String[] data = new String[database.size()];
+                    data = database.toArray(data); // convert to string array
+
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(),
+                            android.R.layout.simple_spinner_item, data);
+                    spinner.setAdapter(adapter); // adapter needs to be notified of any updates
+                } else {
+                    Log.e("Error", e.getMessage());
+                }
+            }
+        });
         new MaterialDialog.Builder(this)
                 .title("Add an Assignment")
                 .customView(mAssigmentAddDialog, true)
@@ -135,7 +157,7 @@ public class HomeActivity extends AppCompatActivity {
                         Log.d("Assignment Name", assignmentName);
 
                         // determine which class was selected
-                        Spinner spinner = (Spinner) mAssigmentAddDialog.findViewById(R.id.input_spinner_assignment_name);
+
                         String courseName = spinner.getSelectedItem().toString();
                         Log.d("Course Name", courseName);
 
@@ -146,8 +168,6 @@ public class HomeActivity extends AppCompatActivity {
 
                         courses.saveInBackground();
                         // course.pinInBackground();
-
-                        // TODO: update spinner for assignments
 
                     }
                 })
@@ -174,7 +194,7 @@ public class HomeActivity extends AppCompatActivity {
                     }
 
                     String[] data = new String[database.size()];
-                    data = database.toArray(data); // conver to string array
+                    data = database.toArray(data); // convert to string array
 
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(),
                             android.R.layout.simple_spinner_item, data);
