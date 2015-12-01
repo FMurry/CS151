@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.andexert.library.RippleView;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.sixamigos.sjsucanvasapp.R;
 import com.sixamigos.sjsucanvasapp.canvas.CanvasConnector;
 import com.sixamigos.sjsucanvasapp.color.Colors;
@@ -22,6 +27,7 @@ import com.sixamigos.sjsucanvasapp.home.HomeActivity;
 import com.sixamigos.sjsucanvasapp.login.canvas.CanvasLoginFailureException;
 import com.sixamigos.sjsucanvasapp.login.canvas.LogInActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
@@ -34,6 +40,7 @@ import butterknife.ButterKnife;
 public class CoursesFragment extends Fragment {
 
     @Bind(R.id.list) LinearLayout mLinearLayout;
+    int colorCount = 0;
 
     @Nullable
     @Override
@@ -43,6 +50,7 @@ public class CoursesFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         showCourses();
+        retrieveParseData();
 
         return view;
     }
@@ -55,14 +63,13 @@ public class CoursesFragment extends Fragment {
 
                 LinearLayout linearLayout = null;
 
-                int colorCount = 0;
                 for (int i = 0; i < courses.size(); i++) {
 
                     if (i % 2 == 0) {
                         linearLayout = createLinearLayout();
                     }
 
-                    linearLayout.addView(createCard((Course)courses.get(i), colorCount));
+                    linearLayout.addView(createCard((Course) courses.get(i), colorCount));
                     colorCount++;
 
                     if (i % 2 == 0) {
@@ -139,5 +146,52 @@ public class CoursesFragment extends Fragment {
         });
 
         return cardView;
+    }
+
+    public void retrieveParseData() {
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Courses");
+        query.whereExists("courseName");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                LinearLayout linearLayout = null;
+                for (int i = 0; i < objects.size(); i++) {
+
+                    if (i % 2 == 0) {
+                        linearLayout = createLinearLayout();
+                    }
+
+                    View view =
+                        LayoutInflater.from(getContext()).inflate(R.layout.card_course, null);
+                    CardView cardView = (CardView) view.findViewById(R.id.course_card_view);
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        1.0f
+                    );
+                    layoutParams.setMargins(
+                        (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics()),
+                        0,
+                        (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics()),
+                        0);
+                    cardView.setLayoutParams(layoutParams);
+                    cardView.setBackgroundColor(getResources().getColor(Colors.getColor(colorCount)));
+
+
+                    TextView mCourseSymbolTextView = (TextView) view.findViewById(R.id.course_symbol);
+                    mCourseSymbolTextView.setText(objects.get(i).getString("courseName"));
+
+                    RelativeLayout mGradeRelativeLayout = (RelativeLayout) view.findViewById(R.id.grades_layout);
+                    mGradeRelativeLayout.setBackgroundColor(getResources().getColor(Colors.getDarkColor(colorCount)));
+
+                    colorCount++;
+
+                    linearLayout.addView(view);
+                    if (i % 2 == 0) {
+                        mLinearLayout.addView(linearLayout);
+                    }
+                }
+            }
+        });
     }
 }
