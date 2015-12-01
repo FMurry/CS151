@@ -105,7 +105,11 @@ public class CanvasConnector {
                             assignment.setName(assignmentData.getString("name"));
                             assignment.setDescription(assignmentData.getString("description"));
                             if (assignmentData.has("points_possible"))
+                                try {
                                 assignment.setTotalPoints(assignmentData.getDouble("points_possible"));
+                                    } catch (Exception e) {
+                                    assignment.setTotalPoints(0);
+                                }
                             else assignment.setTotalPoints(0);
                             assignment.setDueDate(assignmentData.getString("due_at"));
                             assignments.add(assignment);
