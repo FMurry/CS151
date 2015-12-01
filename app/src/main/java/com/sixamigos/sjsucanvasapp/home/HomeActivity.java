@@ -1,5 +1,6 @@
 package com.sixamigos.sjsucanvasapp.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -110,6 +111,11 @@ public class HomeActivity extends AppCompatActivity {
                         // save to Parse (local)
                         courses.saveInBackground();
                         //course.pinInBackground(); // this can be changed to saveInBackground() to upload to Parse cloud
+
+                        Intent intent = getIntent();
+                        finish();
+                        startActivity(intent);
+
                     }
                 })
                 .negativeText("Cancel")
@@ -197,7 +203,7 @@ public class HomeActivity extends AppCompatActivity {
                     data = database.toArray(data); // convert to string array
 
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(),
-                            android.R.layout.simple_spinner_item, data);
+                        android.R.layout.simple_spinner_item, data);
                     spinner.setAdapter(adapter); // adapter needs to be notified of any updates
                 } else {
                     Log.e("Error", e.getMessage());
