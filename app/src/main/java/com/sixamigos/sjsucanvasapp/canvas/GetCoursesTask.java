@@ -1,6 +1,10 @@
 package com.sixamigos.sjsucanvasapp.canvas;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
+
+import com.sixamigos.sjsucanvasapp.home.HomeActivity;
 
 import org.json.JSONObject;
 
@@ -14,11 +18,22 @@ import java.util.HashMap;
 /**
  * @author Alex Heritier
  */
-public class GetCoursesTask extends AsyncTask<HashMap<String, String>, String, JSONObject> {
+public class GetCoursesTask extends AsyncTask<HashMap<String, String>, Integer, JSONObject> {
     private static final String TAG = "canvas.GetCoursesTask";
     private static final String COURSE_URL= "https://sjsu.instructure.com/api/v1/courses";
 
     private CanvasCallback callback;
+    private ProgressDialog dialog;
+
+    public GetCoursesTask(Context context) {
+        dialog = new ProgressDialog(context);
+    }
+
+    @Override
+    protected void onPreExecute() {
+        dialog.setMessage("Gathering Courses");
+        dialog.show();
+    }
 
     @Override
     protected JSONObject doInBackground(HashMap<String, String>[] params) {
@@ -36,11 +51,9 @@ public class GetCoursesTask extends AsyncTask<HashMap<String, String>, String, J
         this.callback = callback;
     }
 
-    protected void onProgressUpdate(String... progress) {
-
-    }
-
     protected void onPostExecute(JSONObject result) {
+        if (dialog.isShowing())
+            dialog.dismiss();
         callback.call(result);
     }
 }

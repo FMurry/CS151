@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F44336</color>
-    <color name="colorPrimaryDark">#D32F2F</color>
-    <color name="colorAccent">#FFA500</color>
+    <color name="colorPrimary">#0055A2</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorAccent">#FBC02D</color>
+
+    <color name="sjsuBlue">#0055A2</color>
+    <color name="sjsuGray">#939597</color>
+    <color name="sjsuGold">#FBC02D</color>
+    <color name="darkBlue">#1A237E</color>
+    <color name="darkGray">#424242</color>
+    <color name="darkGold">#E5A823</color>
 </resources>
