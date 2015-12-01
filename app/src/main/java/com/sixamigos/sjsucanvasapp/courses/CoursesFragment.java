@@ -140,4 +140,8 @@ public class CoursesFragment extends Fragment {
 
         return cardView;
     }
+
+    public void retrieveParseData() {
+
+    }
 }
