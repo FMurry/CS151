@@ -40,7 +40,6 @@
             android:layout_below="@+id/course_symbol"
             android:layout_centerHorizontal="true"
             android:paddingBottom="30dp"
-            android:text="This is a test string"
             android:textColor="@android:color/white"/>
 
         <RelativeLayout
