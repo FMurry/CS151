@@ -103,12 +103,15 @@ public class HomeActivity extends AppCompatActivity {
                         String courseName = mAddCourseEditText.getText().toString();
 
                         // local data store
-                        ParseObject course = new ParseObject(courseName); // create a DB called <courseName>
-                        course.put("courseName", courseName); // add the attribute courseName and the actual name
+                        ParseObject courses = new ParseObject("Courses"); // create a DB called <courseName>
+                        Log.d("Course Name", courseName);
+                        courses.put("courseName", courseName); // add the attribute courseName and the actual name
 
                         // save to Parse (local)
-                        course.pinInBackground(); // this can be changed to saveInBackground() to upload to Parse cloud
+                        courses.saveInBackground();
+                        //course.pinInBackground(); // this can be changed to saveInBackground() to upload to Parse cloud
 
+                        // TODO: Update spinner to show most updated course list.
                     }
                 })
                 .negativeText("Cancel")
@@ -134,13 +137,17 @@ public class HomeActivity extends AppCompatActivity {
                         // determine which class was selected
                         Spinner spinner = (Spinner) mAssigmentAddDialog.findViewById(R.id.input_spinner_assignment_name);
                         String courseName = spinner.getSelectedItem().toString();
-
+                        Log.d("Course Name", courseName);
 
                         // add assignment to selected course db
-                        ParseObject course = new ParseObject(courseName); // TODO: selected courseName as argument
-                        course.put("assignmentName", assignmentName);
+                        ParseObject courses = new ParseObject("Assignments");
+                        courses.put("assignmentName", assignmentName);
+                        courses.put("courseName", courseName);
 
-                        course.pinInBackground();
+                        courses.saveInBackground();
+                        // course.pinInBackground();
+
+                        // TODO: update spinner for assignments
 
                     }
                 })
@@ -150,16 +157,33 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private View setupAssignmentSpinner() {
-        View view = getLayoutInflater().inflate(R.layout.dialog_content_add_assignment, null);
+        final View view = getLayoutInflater().inflate(R.layout.dialog_content_add_assignment, null);
 
-        Spinner spinner = (Spinner) view.findViewById(R.id.input_spinner_assignment_name);
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Courses");
+        query.whereExists("courseName");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null) {
 
-        String[] data = new String[]{
-                "CS157A", "Test Class 2", "Test Class 3"
-        };
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item, data);
-        spinner.setAdapter(adapter);
+                    Spinner spinner = (Spinner) view.findViewById(R.id.input_spinner_assignment_name);
+
+                    ArrayList<String> database = new ArrayList<>();
+                    for (ParseObject course : objects) { // retrieve from database
+                        database.add(course.getString("courseName"));
+                    }
+
+                    String[] data = new String[database.size()];
+                    data = database.toArray(data); // conver to string array
+
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(),
+                            android.R.layout.simple_spinner_item, data);
+                    spinner.setAdapter(adapter); // adapter needs to be notified of any updates
+                } else {
+                    Log.e("Error", e.getMessage());
+                }
+            }
+        });
 
         return view;
     }
