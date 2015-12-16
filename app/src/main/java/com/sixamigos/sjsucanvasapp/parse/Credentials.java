@@ -8,8 +8,8 @@ public class Credentials {
     private String token2;
 
     public Credentials() {
-        token1 = "LoOrV5ibCqKJF8bD9xLW6jbjkFkFyYzeCkjWE14M";
-        token2 = "dBcRkf1zq7ZmIBtNuoSgcm8BcidHbywBTn3GXEsF";
+        token1 = "";
+        token2 = "";
     }
 
     public String getToken1() {
